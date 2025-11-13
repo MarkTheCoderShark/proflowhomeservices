@@ -1,6 +1,7 @@
 import CTASection from "@/components/sections/CTASection";
 import CityServices from "@/components/sections/CityServices";
 import Neighborhoods from "@/components/sections/Neighborhoods";
+import CityIntroSection from "@/components/sections/CityIntroSection";
 import { BreadcrumbsJsonLd } from "@/components/seo/JsonLd";
 import { seoMetadata } from "@/lib/seo";
 import { cityContent } from "@/lib/cities";
@@ -30,6 +31,12 @@ export default function Page() {
           <p className="mt-2 text-slate max-w-2xl">{city.heroSubtitle}</p>
         </div>
       </section>
+      <CityIntroSection
+        intro={city.intro}
+        services={city.serviceList}
+        internalLinks={city.internalLinks}
+        city={city.name}
+      />
       <CityServices />
       <Neighborhoods city={city.name} items={city.neighborhoods} />
       <CTASection />

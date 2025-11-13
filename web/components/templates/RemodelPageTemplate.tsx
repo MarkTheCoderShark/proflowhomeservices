@@ -82,6 +82,28 @@ export default function RemodelPageTemplate({
           </div>
         </section>
       )}
+      {data.copySections.map((section) => (
+        <section key={section.title} className="section bg-white">
+          <div className="container">
+            <h3 className="heading text-xl font-semibold text-evergreen">{section.title}</h3>
+            <p className="mt-2 text-slate">{section.text}</p>
+          </div>
+        </section>
+      ))}
+      {data.internalLinks.length > 0 && (
+        <section className="section bg-gray-50">
+          <div className="container">
+            <h3 className="heading text-xl font-semibold text-evergreen">Explore related remodeling topics</h3>
+            <div className="mt-2 flex flex-wrap gap-2 text-sm">
+              {data.internalLinks.map((link) => (
+                <a key={link.href} href={link.href} className="text-aqua underline-offset-2 hover:underline">
+                  {link.text}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       {extraSections}
       {notes ? (
         <section className="section bg-slate-50">

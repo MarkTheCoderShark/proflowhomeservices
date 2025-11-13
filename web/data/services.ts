@@ -18,6 +18,8 @@ export type ServicePageContent = {
   process: string[];
   highlights: { title: string; desc: string }[];
   gallery: { src: string; alt: string }[];
+  copySections: { title: string; text: string }[];
+  internalLinks: { text: string; href: string }[];
 };
 
 export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
@@ -48,6 +50,21 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { src: "/hero-city-roseville.jpeg", alt: "Roseville home" },
       { src: "/hero-city-rocklin.jpeg", alt: "Rocklin roof" },
     ],
+    copySections: [
+      {
+        title: "Why clogged gutters hurt homes",
+        text: "When gutters back up, rainwater breeches siding, ruins landscaping, and leaves you guessing if the roof is leaking." ,
+      },
+      {
+        title: "ProFlow360 keeps you updated",
+        text: "Our crews log every inspection and share photos/texts so you can see the clean lines, proper pitch, and cleared downspouts." ,
+      },
+    ],
+    internalLinks: [
+      { text: "Gutter Guards", href: "/services/gutter-guards" },
+      { text: "Handyman Services", href: "/services/handyman" },
+      { text: "Service Areas", href: "/service-areas" },
+    ],
   },
   "gutter-guards": {
     heroTitle: "Gutter Guards",
@@ -74,6 +91,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
     gallery: [
       { src: "/gutter cleaning.jpeg", alt: "Gutter guard close-up" },
       { src: "/hero-service-gutter-cleaning.jpeg", alt: "Guard installation" },
+    ],
+    copySections: [
+      {
+        title: "Why guards matter",
+        text: "Gutter guards reduce the weekly chore of cleaning, keeping debris out while preserving the clean aesthetic you expect from ProFlow." ,
+      },
+      {
+        title: "Installed with premium standards",
+        text: "We use manufacturer-recommended fasteners and show you the install sequence via ProFlow360, so you trust the investment.",
+      },
+    ],
+    internalLinks: [
+      { text: "Gutter Repair & Replacement", href: "/services/gutter-repair-replacement" },
+      { text: "Service Areas", href: "/service-areas" },
     ],
   },
   "gutter-repair-replacement": {
@@ -102,6 +133,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { src: "/gutter cleaning.jpeg", alt: "Repaired gutter" },
       { src: "/hero-city-auburn.jpeg", alt: "Auburn home" },
     ],
+    copySections: [
+      {
+        title: "When repairs are the smarter choice",
+        text: "Sagging runs, leaks, and pitch problems are often small fixes that restore performance without replacing the whole system.",
+      },
+      {
+        title: "Transparent estimates",
+        text: "We photograph the issue, explain repair vs replacement, and send the plan via ProFlow360 so you approve with confidence.",
+      },
+    ],
+    internalLinks: [
+      { text: "Maintenance Plans", href: "/services/maintenance-plans" },
+      { text: "Service Areas", href: "/service-areas" },
+    ],
   },
   "interior-painting": {
     heroTitle: "Interior Painting",
@@ -128,6 +173,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
     gallery: [
       { src: "/hero-service-interior-painting.jpeg", alt: "Fresh interior walls" },
       { src: "/dreamina-2025-11-12-8102-A luxurious, freshly remodeled bathroom ....jpeg", alt: "Lux bathroom" },
+    ],
+    copySections: [
+      {
+        title: "Problem: outdated finishes",
+        text: "Interiors grow tired quickly—streaked paint, scuffed trim, and clashing colors that reduce the feeling of a premium home.",
+      },
+      {
+        title: "Solution: prep + premium products",
+        text: "We protect your furnishings, patch walls, and apply low-VOC paints with crisp edges so your rooms feel calm and luxurious again.",
+      },
+    ],
+    internalLinks: [
+      { text: "Remodeling", href: "/remodeling" },
+      { text: "Contact", href: "/contact" },
     ],
   },
   "exterior-painting": {
@@ -157,6 +216,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { src: "/hero-service-exterior-painting.jpeg", alt: "Exterior paint pro" },
       { src: "/home-cta-background.jpeg", alt: "Home exterior" },
     ],
+    copySections: [
+      {
+        title: "Exterior wear and tear",
+        text: "Sun, wind, and rain fade paint, crack trim, and leave moisture trapped under siding without a proactive refresh.",
+      },
+      {
+        title: "Execution by licensed crews",
+        text: "Our painters dispense contractor-grade systems, follow manufacturer specs, and send progress updates through ProFlow360.",
+      },
+    ],
+    internalLinks: [
+      { text: "Maintenance Plans", href: "/services/maintenance-plans" },
+      { text: "Projects", href: "/projects" },
+    ],
   },
   handyman: {
     heroTitle: "Handyman Services",
@@ -183,6 +256,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
     gallery: [
       { src: "/hero-service-handyman.jpeg", alt: "Handyman working" },
       { src: "/hero-city-roseville.jpeg", alt: "Roseville repair" },
+    ],
+    copySections: [
+      {
+        title: "Common homeowner headaches",
+        text: "From stuck doors and drywall patches to trim updates, the to-do list never shrinks—until you call a team that handles it all.",
+      },
+      {
+        title: "Organized, communicative crews",
+        text: "Each job is scheduled through ProFlow360 so arrivals, scope, and invoices stay transparent and reliable.",
+      },
+    ],
+    internalLinks: [
+      { text: "Services", href: "/services" },
+      { text: "Contact", href: "/contact" },
     ],
   },
   "pressure-washing": {
@@ -211,6 +298,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { src: "/hero-service-pressure-washing.jpeg", alt: "Pressure washing" },
       { src: "/home-cta-background.jpeg", alt: "Clean driveway" },
     ],
+    copySections: [
+      {
+        title: "Dirty surfaces steal curb appeal",
+        text: "Moldy siding, grimy driveways, and algae-coated decks make homes look neglected—even if the structure is sound.",
+      },
+      {
+        title: "Tailored cleaning",
+        text: "We calibrate pressure and detergents so every surface—from concrete to wood—gets the right treatment.",
+      },
+    ],
+    internalLinks: [
+      { text: "Gutter Cleaning", href: "/services/gutter-cleaning" },
+      { text: "Projects", href: "/projects" },
+    ],
   },
   "roof-solar-cleaning": {
     heroTitle: "Roof & Solar Cleaning",
@@ -238,6 +339,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { src: "/hero-service-roof-solar-cleaning.jpeg", alt: "Solar cleaning" },
       { src: "/hero-city-folsom.jpeg", alt: "Folsom home" },
     ],
+    copySections: [
+      {
+        title: "Dirt drags down performance",
+        text: "Roofs and solar arrays need gentle cleaning to prevent moss, dust, and debris from shortening their life.",
+      },
+      {
+        title: "Calibrated for warranties",
+        text: "We follow manufacturer protocols for soft washing, document every visit, and share proofs in ProFlow360.",
+      },
+    ],
+    internalLinks: [
+      { text: "Roofing & Solar", href: "/services/roof-solar-cleaning" },
+      { text: "Service Areas", href: "/service-areas" },
+    ],
   },
   "maintenance-plans": {
     heroTitle: "Maintenance Plans",
@@ -264,6 +379,20 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
     gallery: [
       { src: "/hero-service-gutter-cleaning.jpeg", alt: "Maintenance visit" },
       { src: "/home-cta-background.jpeg", alt: "Home after service" },
+    ],
+    copySections: [
+      {
+        title: "Proactive seasonal care",
+        text: "A yearly maintenance plan prevents surprises by combining gutters, washing, and inspections into a single relationship.",
+      },
+      {
+        title: "Automated follow-ups",
+        text: "ProFlow360 schedules and reminds you, so the same crews arrive at consistent intervals without you chasing dates.",
+      },
+    ],
+    internalLinks: [
+      { text: "Gutter Cleaning", href: "/services/gutter-cleaning" },
+      { text: "Pressure Washing", href: "/services/pressure-washing" },
     ],
   },
 };

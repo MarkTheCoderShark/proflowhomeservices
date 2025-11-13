@@ -16,6 +16,8 @@ export type RemodelContent = {
   process: string[];
   highlights: { title: string; desc: string }[];
   gallery: { src: string; alt: string }[];
+  copySections: { title: string; text: string }[];
+  internalLinks: { text: string; href: string }[];
   cta?: string;
 };
 
@@ -47,6 +49,20 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
       { src: "/remodel-flooring.jpeg", alt: "Fresh flooring" },
       { src: "/remodel-adu.jpeg", alt: "ADU exterior" },
     ],
+    copySections: [
+      {
+        title: "Design + build under one roof",
+        text: "ProFlow Home Services coordinates consultations, scopes, and construction so remodels stay on budget and on schedule.",
+      },
+      {
+        title: "Meticulous communication",
+        text: "Every subcontractor, permit, and payment is tracked through ProFlow360, keeping you in the loop from drawings to the final walkthrough.",
+      },
+    ],
+    internalLinks: [
+      { text: "Projects", href: "/projects" },
+      { text: "Service Areas", href: "/service-areas" },
+    ],
     cta: "Start your remodeling consultation today",
   },
   bathroom: {
@@ -75,6 +91,20 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
       { src: "/dreamina-2025-11-12-8102-A luxurious, freshly remodeled bathroom ....jpeg", alt: "Lux bathroom" },
       { src: "/hero-remodeling.jpeg", alt: "Remodel dive" },
     ],
+    copySections: [
+      {
+        title: "Bathrooms that breathe",
+        text: "We highlight clean lines, durable fixtures, and tile patterns that match your lifestyle while keeping the home functional during construction.",
+      },
+      {
+        title: "Tech-backed oversight",
+        text: "ProFlow360 shares the schedule, photos, and approvals so you stay confident throughout demolition, plumbing, and finish work.",
+      },
+    ],
+    internalLinks: [
+      { text: "Remodeling", href: "/remodeling" },
+      { text: "Projects", href: "/projects" },
+    ],
   },
   kitchen: {
     heroTitle: "Kitchen Remodeling",
@@ -102,6 +132,20 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
       { src: "/remodel-kitchen.jpeg", alt: "Kitchen finish" },
       { src: "/remodel-flooring.jpeg", alt: "Flooring" },
     ],
+    copySections: [
+      {
+        title: "Kitchens engineered for living",
+        text: "We combine storage solutions, lighting, and finishes so your kitchen supports everyday life and entertaining.",
+      },
+      {
+        title: "Phased builds",
+        text: "The crew sequences demolition, cabinets, and appliances to keep disruption low and transparency high via ProFlow360.",
+      },
+    ],
+    internalLinks: [
+      { text: "Contact", href: "/contact" },
+      { text: "Projects", href: "/projects" },
+    ],
   },
   "garage-conversions": {
     heroTitle: "Garage Conversions",
@@ -128,6 +172,20 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
     gallery: [
       { src: "/remodel-adu.jpeg", alt: "Garage conversion" },
       { src: "/hero-remodeling2.jpeg", alt: "Conversion interior" },
+    ],
+    copySections: [
+      {
+        title: "Create livable space",
+        text: "Garage conversions transform unused bays into bedrooms, offices, or rental suites while meeting local codes.",
+      },
+      {
+        title: "Compliance first",
+        text: "We secure permits, insulate properly, and sequence electrical/plumbing to deliver code-ready occupancy.",
+      },
+    ],
+    internalLinks: [
+      { text: "ADUs", href: "/remodeling/adu" },
+      { text: "Projects", href: "/projects" },
     ],
   },
   flooring: {
@@ -160,6 +218,20 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
       { src: "/lvp-flooring4.jpeg", alt: "Natural tone vinyl plank" },
       { src: "/remodel-flooring.jpeg", alt: "Flooring install" },
     ],
+    copySections: [
+      {
+        title: "Flooring that lasts",
+        text: "Luxury vinyl plank, hardwood, and tile installations withstand Sacramento weather and daily foot traffic with proper prep.",
+      },
+      {
+        title: "Full-service coordination",
+        text: "We lock in materials, timelines, and finishes so the flooring becomes the reliable foundation for the rest of the remodel.",
+      },
+    ],
+    internalLinks: [
+      { text: "Projects", href: "/projects" },
+      { text: "Contact", href: "/contact" },
+    ],
   },
   "drywall-framing": {
     heroTitle: "Drywall & Framing",
@@ -187,6 +259,20 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
       { src: "/hero-remodeling2.jpeg", alt: "Drywall crew" },
       { src: "/home-cta-background.jpeg", alt: "Drywall finish" },
     ],
+    copySections: [
+      {
+        title: "Structural & repair work",
+        text: "Drywall and framing sections create the canvas for paint, tile, and flooring—so we build them straight and clean.",
+      },
+      {
+        title: "Precision ready for paint",
+        text: "Our crews tape, mud, sand, and texture with consistent results that leave painters with smooth walls and ceilings.",
+      },
+    ],
+    internalLinks: [
+      { text: "Remodeling", href: "/remodeling" },
+      { text: "Projects", href: "/projects" },
+    ],
   },
   adu: {
     heroTitle: "ADUs",
@@ -209,6 +295,20 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
       { title: "Design + permitting", desc: "We coordinate architects and permit submissions." },
       { title: "Turnkey build", desc: "HVAC, electrical, plumbing, and finishes." },
       { title: "Scaling to franchise", desc: "Supports future ProFlow branches." },
+    ],
+    copySections: [
+      {
+        title: "ADUs designed for modern living",
+        text: "Accessory units, guest suites, and rental spaces receive the same planning, permits, and finishes as our flagship remodels.",
+      },
+      {
+        title: "Documented compliance",
+        text: "We align with Sacramento County ADU rules, sequence inspections, and share photo updates in ProFlow360.",
+      },
+    ],
+    internalLinks: [
+      { text: "Projects", href: "/projects" },
+      { text: "Remodeling", href: "/remodeling" },
     ],
     gallery: [
       { src: "/remodel-adu.jpeg", alt: "ADU exterior" },
