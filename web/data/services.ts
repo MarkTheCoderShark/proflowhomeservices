@@ -1,3 +1,29 @@
+import type { LucideIcon } from "lucide-react";
+import {
+  Search,
+  Trash2,
+  Droplets,
+  Camera,
+  Ruler,
+  Wrench,
+  Shield,
+  CheckCircle,
+  Clipboard,
+  Users,
+  Paintbrush,
+  Sparkles,
+  ClipboardCheck,
+  MessageSquare,
+  HardHat,
+  Eye,
+  FileSearch,
+  Hammer,
+  SprayCan,
+  CalendarCheck,
+  FileText,
+  Bell,
+} from "lucide-react";
+
 export type ServiceSlug =
   | "gutter-cleaning"
   | "gutter-guards"
@@ -15,7 +41,7 @@ export type ServicePageContent = {
   heroImage: string;
   overview: string;
   benefits: string[];
-  process: string[];
+  process: { title: string; desc: string; icon: LucideIcon }[];
   highlights: { title: string; desc: string }[];
   gallery: { src: string; alt: string }[];
   copySections: { title: string; text: string }[];
@@ -54,10 +80,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Inspect for clogs, pitch issues, and missing fasteners",
     ],
     process: [
-      "Inspect gutters, ladders, and safety zones",
-      "Manually remove debris and bag it",
-      "Flush downspouts and test water flow",
-      "Clean up and capture before/after photos",
+      {
+        title: "Inspection & Safety Setup",
+        desc: "We inspect your gutter system, assess debris levels, and set up ladders with proper safety equipment to protect your property.",
+        icon: Search,
+      },
+      {
+        title: "Debris Removal",
+        desc: "Our team hand-scoops all leaves, pine needles, and grime from gutters and channels, bagging everything for proper disposal.",
+        icon: Trash2,
+      },
+      {
+        title: "Downspout Flushing",
+        desc: "We flush every downspout with water to ensure complete drainage, identify hidden clogs, and test proper water flow.",
+        icon: Droplets,
+      },
+      {
+        title: "Documentation & Cleanup",
+        desc: "Before leaving, we clean up all debris and share before/after photos through ProFlow360 so you can see the results.",
+        icon: Camera,
+      },
     ],
     highlights: [
       { title: "Local crews", desc: "Sacramento-area technicians with attention to detail." },
@@ -163,10 +205,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Protect against pests and overflow",
     ],
     process: [
-      "Measure and recommend the right system",
-      "Prepare gutters, replace damaged sections",
-      "Install guards with even seams and spacing",
-      "Test flow and leave the job spotless",
+      {
+        title: "System Assessment",
+        desc: "We measure your gutters and recommend the best guard system based on your roof type, tree coverage, and budget.",
+        icon: Ruler,
+      },
+      {
+        title: "Gutter Preparation",
+        desc: "Gutters are thoroughly cleaned and any damaged sections are repaired or replaced to ensure a solid foundation.",
+        icon: Wrench,
+      },
+      {
+        title: "Professional Installation",
+        desc: "Guards are installed with even seams, proper spacing, and manufacturer-recommended fasteners for long-lasting protection.",
+        icon: Shield,
+      },
+      {
+        title: "Flow Testing & Final Inspection",
+        desc: "We test water flow to ensure guards perform correctly, then complete a thorough cleanup and walkthrough with you.",
+        icon: CheckCircle,
+      },
     ],
     highlights: [
       { title: "Premium brands", desc: "We source guards built for California climates." },
@@ -204,10 +262,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Upgrade to heavier gauges when needed",
     ],
     process: [
-      "Assess damage and recommend repair vs replacement",
-      "Reinforce hangers and seams with new fasteners",
-      "Match new sections to your existing profile",
-      "Test pitch and complete cleanup",
+      {
+        title: "Damage Assessment",
+        desc: "We thoroughly inspect your gutters, identify all issues, and provide transparent recommendations on repair versus replacement.",
+        icon: Clipboard,
+      },
+      {
+        title: "Structural Reinforcement",
+        desc: "Loose hangers and leaking seams are reinforced with new fasteners and sealants to restore structural integrity.",
+        icon: Wrench,
+      },
+      {
+        title: "Section Replacement",
+        desc: "Damaged gutter sections are replaced with custom-cut pieces that match your existing profile and color perfectly.",
+        icon: Hammer,
+      },
+      {
+        title: "Testing & Verification",
+        desc: "We test pitch and drainage, verify proper water flow, and complete a thorough cleanup with photo documentation.",
+        icon: CheckCircle,
+      },
     ],
     highlights: [
       { title: "Seamless finishes", desc: "Custom-cut sections with matching colors." },
@@ -245,10 +319,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Deliver crisp lines and even coverage",
     ],
     process: [
-      "Walk through rooms with you for colors and scope",
-      "Protect surfaces and complete prep work",
-      "Apply finish coats with detail around trim",
-      "Walk through and touch up any needed areas",
+      {
+        title: "Color Consultation",
+        desc: "We walk through your home, discuss color palettes, and help you select finishes that match your style and flow throughout your space.",
+        icon: MessageSquare,
+      },
+      {
+        title: "Surface Protection & Prep",
+        desc: "Furniture and floors are carefully masked, walls are patched and sanded, and surfaces are primed for optimal paint adhesion.",
+        icon: Shield,
+      },
+      {
+        title: "Professional Application",
+        desc: "Premium low-VOC paints are applied with crisp edges and even coverage, paying special attention to trim and detailed areas.",
+        icon: Paintbrush,
+      },
+      {
+        title: "Final Walkthrough",
+        desc: "We conduct a thorough inspection with you, complete any touch-ups, and ensure every room meets our quality standards.",
+        icon: CheckCircle,
+      },
     ],
     highlights: [
       { title: "Professional crews", desc: "Clean, respectful techs who treat your home like theirs." },
@@ -286,11 +376,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Use top-tier paints designed for California weather",
     ],
     process: [
-      "Power wash and dry the exterior",
-      "Scrape, sand, and prime bare wood",
-      "Caulk gaps and protect landscaping",
-      "Apply manufacturer-approved top coats",
-      "Final walkthrough and cleanup",
+      {
+        title: "Pressure Washing & Drying",
+        desc: "We power wash your exterior to remove dirt, mildew, and loose paint, then allow surfaces to dry completely before painting.",
+        icon: SprayCan,
+      },
+      {
+        title: "Surface Preparation",
+        desc: "All surfaces are scraped, sanded, and primed. Bare wood is sealed and gaps are caulked to create a smooth, protected base.",
+        icon: HardHat,
+      },
+      {
+        title: "Professional Painting",
+        desc: "Contractor-grade paints designed for California weather are applied with precision around trims, shutters, and architectural details.",
+        icon: Paintbrush,
+      },
+      {
+        title: "Final Inspection & Cleanup",
+        desc: "We conduct a complete walkthrough, verify coverage and quality, and clean up all materials with photo documentation via ProFlow360.",
+        icon: CheckCircle,
+      },
     ],
     highlights: [
       { title: "Weather-ready", desc: "Paint systems designed for heat and humidity." },
@@ -328,10 +433,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Keep older homes operating safely",
     ],
     process: [
-      "Assess request and prioritize safety",
-      "Provide transparent pricing",
-      "Execute repairs with skilled techs",
-      "Clean up and review the work with you",
+      {
+        title: "Service Assessment",
+        desc: "We review your repair list, prioritize safety concerns, and identify the best approach for each task on your punch list.",
+        icon: ClipboardCheck,
+      },
+      {
+        title: "Transparent Pricing",
+        desc: "You receive clear, flat-rate pricing for all repairs with no hidden fees or surprises, shared through ProFlow360 for approval.",
+        icon: FileText,
+      },
+      {
+        title: "Expert Execution",
+        desc: "Our skilled multi-trade technicians complete repairs efficiently using proper techniques and quality materials that last.",
+        icon: Hammer,
+      },
+      {
+        title: "Quality Review",
+        desc: "We walk through completed work with you, verify everything functions properly, and clean up all debris before leaving.",
+        icon: CheckCircle,
+      },
     ],
     highlights: [
       { title: "Multi-trade crew", desc: "Electrician, carpentry, and general repairs under one roof." },
@@ -369,10 +490,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Prepare surfaces for paint or sealants",
     ],
     process: [
-      "Select pressure and solution for the surface",
-      "Soft-wash sensitive materials (roof, siding)",
-      "High-pressure clean for driveways and decks",
-      "Rinse and inspect with you",
+      {
+        title: "Surface Analysis",
+        desc: "We assess your property and select the appropriate pressure settings and eco-friendly cleaning solutions for each surface type.",
+        icon: Eye,
+      },
+      {
+        title: "Soft Wash Application",
+        desc: "Delicate surfaces like roofs, siding, and painted areas are gently cleaned with low-pressure techniques to prevent damage.",
+        icon: Sparkles,
+      },
+      {
+        title: "High-Pressure Cleaning",
+        desc: "Driveways, decks, and concrete surfaces receive thorough high-pressure cleaning to remove embedded dirt, mold, and stains.",
+        icon: SprayCan,
+      },
+      {
+        title: "Final Rinse & Documentation",
+        desc: "All surfaces are thoroughly rinsed, inspected for quality, and documented with before/after photos shared via ProFlow360.",
+        icon: Camera,
+      },
     ],
     highlights: [
       { title: "Protective techniques", desc: "Soft wash on roofs, high pressure on concrete." },
@@ -410,10 +547,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "Remove staining and organic growth",
     ],
     process: [
-      "Inspect material type and panel manufacturer rules",
-      "Apply soft wash solutions and rinse carefully",
-      "Clean debris from gutters and valleys",
-      "Final photos and maintenance notes",
+      {
+        title: "Material & Warranty Review",
+        desc: "We inspect your roof type and solar panel specifications to ensure we follow manufacturer cleaning protocols that protect warranties.",
+        icon: FileSearch,
+      },
+      {
+        title: "Gentle Cleaning Application",
+        desc: "Low-pressure soft wash solutions are carefully applied to remove moss, algae, and buildup without damaging shingles or panels.",
+        icon: Sparkles,
+      },
+      {
+        title: "Debris Removal",
+        desc: "All debris is cleared from gutters, valleys, and around solar arrays to prevent water backup and maximize panel efficiency.",
+        icon: Trash2,
+      },
+      {
+        title: "Documentation & Maintenance Report",
+        desc: "We capture before/after photos, note any early damage spotted, and provide maintenance recommendations through ProFlow360.",
+        icon: Camera,
+      },
     ],
     highlights: [
       { title: "Solar safe", desc: "We follow manufacturer cleaning protocols." },
@@ -451,10 +604,26 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       "One point of contact for the whole home",
     ],
     process: [
-      "Choose a plan that matches your needs",
-      "We schedule and remind through ProFlow360",
-      "Technicians complete services on the agreed timeline",
-      "Receive reports and future recommendations",
+      {
+        title: "Plan Selection",
+        desc: "Choose from seasonal, quarterly, or custom maintenance schedules designed to match your home's needs and your budget.",
+        icon: Clipboard,
+      },
+      {
+        title: "Automated Scheduling",
+        desc: "ProFlow360 handles all scheduling and sends automatic reminders, so you never have to remember when service is due.",
+        icon: Bell,
+      },
+      {
+        title: "Consistent Service Delivery",
+        desc: "The same trusted technicians complete all scheduled services on time, providing continuity and familiarity with your property.",
+        icon: Users,
+      },
+      {
+        title: "Progress Reports & Recommendations",
+        desc: "After each visit, you receive detailed reports with photos and maintenance recommendations to keep your home in peak condition.",
+        icon: CalendarCheck,
+      },
     ],
     highlights: [
       { title: "Flexible visits", desc: "Seasonal, quarterly, or custom schedules." },

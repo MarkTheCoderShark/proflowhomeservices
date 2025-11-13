@@ -5,6 +5,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import BeforeAfter from "@/components/ui/BeforeAfter";
 import RelatedServicesSpotlight from "@/components/sections/RelatedServicesSpotlight";
 import ServiceAreasGrid from "@/components/sections/ServiceAreasGrid";
+import ServiceProcess from "@/components/sections/ServiceProcess";
 import type { ServicePageContent } from "@/data/services";
 
 export default function ServicePageTemplate({
@@ -65,16 +66,7 @@ export default function ServicePageTemplate({
       )}
 
       {/* Section 2: Process - mint_green-50 */}
-      <section className="section bg-mint_green-50">
-        <div className="container">
-          <h2 className="heading text-2xl font-semibold text-viridian-900">Process & Expectations</h2>
-          <ol className="mt-4 list-decimal pl-5 text-slate-700 space-y-3">
-            {data.process.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      <ServiceProcess steps={data.process} />
 
       {/* Section 3: Highlights - viridian-900 (dark band) */}
       <section className="section bg-viridian-900">
