@@ -6,7 +6,8 @@ import CTASection from "@/components/sections/CTASection";
 import RemodelingSpotlight from "@/components/sections/RemodelingSpotlight";
 import ServiceAreasSection from "@/components/sections/ServiceAreasSection";
 import Testimonials from "@/components/sections/Testimonials";
-import FAQAccordion, { faqs as homepageFaqs } from "@/components/sections/FAQAccordion";
+import FAQAccordion from "@/components/sections/FAQAccordion";
+import { faqs as homepageFaqs } from "@/components/sections/faqData";
 import { FAQPageJsonLd } from "@/components/seo/JsonLd";
 
 export default function Home() {
