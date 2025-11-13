@@ -25,7 +25,6 @@ export default async function sitemap() {
     // Remodeling pages
     "remodeling/bathroom",
     "remodeling/kitchen",
-    "remodeling/garage-conversions",
     "remodeling/flooring",
     "remodeling/drywall-framing",
     "remodeling/adu",
@@ -46,4 +45,3 @@ export default async function sitemap() {
     lastModified: new Date(),
   }));
 }
-

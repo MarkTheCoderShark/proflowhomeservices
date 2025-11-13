@@ -15,7 +15,6 @@ export const metadata = seoMetadata({
 const sections = [
   { slug: "bathroom", name: "Bathroom Remodeling" },
   { slug: "kitchen", name: "Kitchen Remodeling" },
-  { slug: "garage-conversions", name: "Garage Conversions" },
   { slug: "flooring", name: "Flooring" },
   { slug: "drywall-framing", name: "Drywall & Framing" },
   { slug: "adu", name: "ADUs" },

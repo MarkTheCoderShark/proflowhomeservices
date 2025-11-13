@@ -2,7 +2,6 @@ export type RemodelSlug =
   | "remodeling"
   | "bathroom"
   | "kitchen"
-  | "garage-conversions"
   | "flooring"
   | "drywall-framing"
   | "adu";
@@ -144,47 +143,6 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
     ],
     internalLinks: [
       { text: "Contact", href: "/contact" },
-      { text: "Projects", href: "/projects" },
-    ],
-  },
-  "garage-conversions": {
-    heroTitle: "Garage Conversions",
-    heroSubtitle: "Add bedrooms, offices, or ADU-ready space with thoughtful planning and code compliance.",
-    heroImage: "/hero-remodeling2.jpeg",
-    overview:
-      "We handle insulation, framing, electrical, and finishes to transform garages into high-use living spaces.",
-    benefits: [
-      "Compliance with local ADU/garage conversion regs",
-      "Insulated, finished, and climate controlled spaces",
-      "High-quality doors, windows, and finishes",
-    ],
-    process: [
-      "Consultation & feasibility",
-      "Scope & estimate",
-      "Construction",
-      "Final walkthrough",
-    ],
-    highlights: [
-      { title: "Permits included", desc: "We prepare plans and pull the necessary permits." },
-      { title: "Multi-trade crew", desc: "Framing, electrical, plumbing, and finishes." },
-      { title: "Future-ready", desc: "Design for ADUs or income suites." },
-    ],
-    gallery: [
-      { src: "/remodel-adu.jpeg", alt: "Garage conversion" },
-      { src: "/hero-remodeling2.jpeg", alt: "Conversion interior" },
-    ],
-    copySections: [
-      {
-        title: "Create livable space",
-        text: "Garage conversions transform unused bays into bedrooms, offices, or rental suites while meeting local codes.",
-      },
-      {
-        title: "Compliance first",
-        text: "We secure permits, insulate properly, and sequence electrical/plumbing to deliver code-ready occupancy.",
-      },
-    ],
-    internalLinks: [
-      { text: "ADUs", href: "/remodeling/adu" },
       { text: "Projects", href: "/projects" },
     ],
   },

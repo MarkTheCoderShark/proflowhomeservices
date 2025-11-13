@@ -26,7 +26,6 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-white/80">
               <li><Link href="/remodeling/bathroom">Bathroom</Link></li>
               <li><Link href="/remodeling/kitchen">Kitchen</Link></li>
-              <li><Link href="/remodeling/garage-conversions">Garage Conversions</Link></li>
               <li><Link href="/remodeling/flooring">Flooring</Link></li>
               <li><Link href="/remodeling/drywall-framing">Drywall & Framing</Link></li>
             </ul>
@@ -53,4 +52,3 @@ export default function Footer() {
     </footer>
   );
 }
-
