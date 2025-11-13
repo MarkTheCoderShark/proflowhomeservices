@@ -1,5 +1,4 @@
 import Hero from "@/components/sections/Hero";
-import TrustBar from "@/components/sections/TrustBar";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 import FeatureGrid from "@/components/sections/FeatureGrid";
 import ProFlowStory from "@/components/sections/ProFlowStory";
@@ -34,7 +33,6 @@ export default function Home() {
         secondaryCta={{ label: "Call (###) ###-####", href: "tel:" }}
         backgroundImage="/hero-home.jpeg"
       />
-      <TrustBar />
       <ServiceGrid />
       <FeatureGrid />
       <ProFlowStory />
