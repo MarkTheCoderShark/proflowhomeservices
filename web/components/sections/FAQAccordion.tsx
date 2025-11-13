@@ -1,6 +1,6 @@
 type QA = { q: string; a: string };
 
-const faqs: QA[] = [
+export const faqs: QA[] = [
   { q: "How fast can you schedule?", a: "We confirm quickly and coordinate through ProFlow360 for smooth scheduling." },
   { q: "Are you licensed and insured?", a: "Yes, we are fully licensed and insured for your protection." },
   { q: "Do you serve my city?", a: "We cover Sacramento, Roseville, Rocklin, Folsom, and more." },
@@ -25,4 +25,3 @@ export default function FAQAccordion() {
     </section>
   );
 }
-

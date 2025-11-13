@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { track } from "@/lib/analytics";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -44,6 +45,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             className="rounded-md bg-aqua px-4 py-2 text-white heading text-sm font-semibold shadow-sm hover:opacity-90"
+            onClick={() => track("cta_click", { location: "navbar", label: "get_estimate" })}
           >
             Get Estimate
           </Link>
@@ -73,7 +75,10 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                track("cta_click", { location: "mobile_nav", label: "get_estimate" });
+                setOpen(false);
+              }}
               className="rounded-md bg-aqua px-4 py-2 text-white heading text-sm font-semibold shadow-sm hover:opacity-90 inline-flex w-max"
             >
               Get Estimate

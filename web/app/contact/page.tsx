@@ -1,15 +1,23 @@
-import type { Metadata } from "next";
 import ContactForm from "@/components/forms/ContactForm";
+import { BreadcrumbsJsonLd } from "@/components/seo/JsonLd";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = seoMetadata({
   title: "Contact / Get Free Estimate",
   description: "Request a free estimate. Expect a quick response via ProFlow360.",
-};
+  path: "/contact",
+});
 
 export default function Contact() {
   return (
     <div className="section">
-      <div className="container grid gap-10 md:grid-cols-3">
+        <div className="container grid gap-10 md:grid-cols-3">
+          <BreadcrumbsJsonLd
+            items={[
+              { name: "Home", url: "/" },
+              { name: "Contact", url: "/contact" },
+            ]}
+          />
         <div className="md:col-span-2">
           <h1 className="heading text-3xl font-semibold text-evergreen">Get a Free Estimate</h1>
           <p className="mt-2 text-slate">We’ll confirm details and schedule your service.</p>
@@ -35,4 +43,3 @@ export default function Contact() {
     </div>
   );
 }
-

@@ -1,0 +1,13 @@
+# macOS / Finder
+.DS_Store
+._*
+
+# Node / build caches (top-level safety; web handles its own)
+node_modules/
+dist/
+build/
+out/
+
+# Env
+.env*
+

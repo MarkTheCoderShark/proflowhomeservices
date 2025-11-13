@@ -1,11 +1,14 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { cities } from "@/lib/routes";
+import { seoMetadata } from "@/lib/seo";
+import { BreadcrumbsJsonLd } from "@/components/seo/JsonLd";
 
-export const metadata: Metadata = {
+export const metadata = seoMetadata({
   title: "Service Areas",
-  description: "Serving Sacramento, Roseville, Rocklin, Loomis, Auburn, Folsom, Granite Bay, Lincoln, and more.",
-};
+  description:
+    "Serving Sacramento, Roseville, Rocklin, Loomis, Auburn, Folsom, Granite Bay, Lincoln, and more.",
+  path: "/service-areas",
+});
 
 function titleize(slug: string) {
   return slug
@@ -18,6 +21,12 @@ export default function ServiceAreas() {
   return (
     <div className="section">
       <div className="container">
+        <BreadcrumbsJsonLd
+          items={[
+            { name: "Home", url: "/" },
+            { name: "Service Areas", url: "/service-areas" },
+          ]}
+        />
         <h1 className="heading text-3xl font-semibold text-evergreen">Service Areas</h1>
         <p className="mt-2 text-slate max-w-2xl">
           Local, professional service across the greater Sacramento region.
@@ -37,4 +46,3 @@ export default function ServiceAreas() {
     </div>
   );
 }
-

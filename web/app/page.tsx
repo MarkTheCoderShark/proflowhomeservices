@@ -6,7 +6,8 @@ import CTASection from "@/components/sections/CTASection";
 import RemodelingSpotlight from "@/components/sections/RemodelingSpotlight";
 import ServiceAreasSection from "@/components/sections/ServiceAreasSection";
 import Testimonials from "@/components/sections/Testimonials";
-import FAQAccordion from "@/components/sections/FAQAccordion";
+import FAQAccordion, { faqs as homepageFaqs } from "@/components/sections/FAQAccordion";
+import { FAQPageJsonLd } from "@/components/seo/JsonLd";
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
       <ServiceAreasSection />
       <Testimonials />
       <FAQAccordion />
+      <FAQPageJsonLd
+        faqs={homepageFaqs.map((item) => ({ question: item.q, answer: item.a }))}
+      />
       <CTASection />
     </>
   );

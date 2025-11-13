@@ -1,14 +1,22 @@
-import type { Metadata } from "next";
+import { BreadcrumbsJsonLd } from "@/components/seo/JsonLd";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = seoMetadata({
   title: "About",
   description: "Mission, vision, company story, team, and technology advantage.",
-};
+  path: "/about",
+});
 
 export default function About() {
   return (
     <div className="section">
-      <div className="container">
+        <div className="container">
+          <BreadcrumbsJsonLd
+            items={[
+              { name: "Home", url: "/" },
+              { name: "About", url: "/about" },
+            ]}
+          />
         <h1 className="heading text-3xl font-semibold text-evergreen">About ProFlow Home Services</h1>
         <div className="mt-4 grid gap-8 md:grid-cols-2">
           <div>
@@ -28,4 +36,3 @@ export default function About() {
     </div>
   );
 }
-

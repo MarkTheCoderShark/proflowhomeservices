@@ -1,14 +1,23 @@
-import type { Metadata } from "next";
+import { BreadcrumbsJsonLd, LocalBusinessJsonLd } from "@/components/seo/JsonLd";
+import { seoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = seoMetadata({
   title: "Reviews",
   description: "Customer reviews pulled from Google, Yelp, and Facebook.",
-};
+  path: "/reviews",
+});
 
 export default function Reviews() {
   return (
     <div className="section">
       <div className="container">
+        <BreadcrumbsJsonLd
+          items={[
+            { name: "Home", url: "/" },
+            { name: "Reviews", url: "/reviews" },
+          ]}
+        />
+        <LocalBusinessJsonLd aggregateRating={{ ratingValue: 4.9, reviewCount: 1200 }} />
         <h1 className="heading text-3xl font-semibold text-evergreen">Reviews</h1>
         <p className="mt-2 text-slate">Integration with review sources coming soon.</p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -23,4 +32,3 @@ export default function Reviews() {
     </div>
   );
 }
-

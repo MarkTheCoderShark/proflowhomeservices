@@ -66,3 +66,88 @@ export function WebSiteJsonLd() {
   return <JsonLd id="ld-website" data={data} />;
 }
 
+export function LocalBusinessJsonLd({
+  name = "ProFlow Home Services",
+  url = process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com",
+  telephone = "(###) ###-####",
+  areaServed = [
+    "Sacramento",
+    "Roseville",
+    "Rocklin",
+    "Loomis",
+    "Auburn",
+    "Folsom",
+    "Granite Bay",
+    "Lincoln",
+  ],
+  aggregateRating,
+}: {
+  name?: string;
+  url?: string;
+  telephone?: string;
+  areaServed?: string[];
+  aggregateRating?: { ratingValue: number; reviewCount: number };
+}) {
+  const data: any = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name,
+    url,
+    telephone,
+    areaServed,
+  };
+  if (aggregateRating) {
+    data.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: aggregateRating.ratingValue,
+      reviewCount: aggregateRating.reviewCount,
+    };
+  }
+  return <JsonLd id="ld-localbusiness-page" data={data} />;
+}
+
+export function CollectionPageJsonLd({
+  name,
+  url,
+}: {
+  name: string;
+  url: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    url,
+  };
+  return <JsonLd id="ld-collection" data={data} />;
+}
+
+export function BlogJsonLd({ name, url }: { name: string; url: string }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name,
+    url,
+  };
+  return <JsonLd id="ld-blog" data={data} />;
+}
+
+export function FAQPageJsonLd({
+  faqs,
+}: {
+  faqs: { question: string; answer: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+  return <JsonLd id="ld-faq" data={data} />;
+}
