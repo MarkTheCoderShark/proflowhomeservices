@@ -21,11 +21,11 @@ export default function FeatureGrid() {
           {features.map((f) => {
             const Icon = f.icon;
             return (
-              <div key={f.title} className="rounded-lg border border-zinc-200 bg-white p-5">
-                <Icon size={20} className="text-aqua" />
-                <div className="mt-2 heading text-lg font-semibold text-evergreen">{f.title}</div>
-                <p className="mt-1 text-slate text-sm">{f.desc}</p>
-              </div>
+            <div key={f.title} className="rounded-lg card-soft p-5 text-slate">
+              <Icon size={20} className="text-sage" />
+              <div className="mt-2 heading card-title text-lg font-semibold">{f.title}</div>
+              <p className="mt-1 text-sm text-slate/80">{f.desc}</p>
+            </div>
             );
           })}
         </div>

@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF9F7;
+  --foreground: #1F3B2C;
+  --charcoal: #1D2A27;
+  --deep-teal: #1B5C58;
+  --sage: #4D5E57;
+  --soft-gray: #E5E5E5;
 }
 
 /* ProFlow Brand Theme Tokens (Tailwind v4 @theme) */
@@ -39,6 +43,19 @@ body {
     Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+.section-dark {
+  background: var(--charcoal);
+}
+
+.section-soft {
+  background: #FFFFFF;
+}
+
+.card-soft {
+  background: #FAF9F7;
+  border: 1px solid var(--soft-gray);
+}
+
 /* Utilities */
 .container {
   margin-left: auto;
@@ -56,4 +73,11 @@ body {
 .section {
   padding-top: 4rem;  /* 64px */
   padding-bottom: 4rem; /* 64px */
+}
+.sand-bg {
+  background: #E9E0D1;
+}
+
+.card-title {
+  color: #3A3F3D;
 }

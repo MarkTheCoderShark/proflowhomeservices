@@ -20,7 +20,7 @@ export default function ProjectGrid() {
             <a
               key={project.title}
               href={project.href}
-              className="group relative block overflow-hidden rounded-lg border border-zinc-200 shadow-sm"
+              className="group relative block overflow-hidden rounded-lg card-soft shadow-sm"
             >
               <div
                 className="h-48 w-full bg-cover bg-center transition group-hover:scale-105"

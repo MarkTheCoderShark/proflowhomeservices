@@ -21,10 +21,10 @@ export default function ServiceGrid() {
             <Link
               key={s.href}
               href={s.href}
-              className="rounded-lg border border-zinc-200 bg-white p-5 hover:shadow-sm transition"
+              className="rounded-lg card-soft p-5 text-slate transition hover:shadow-lg"
             >
-              <div className="heading text-lg text-evergreen font-semibold">{s.title}</div>
-              <p className="mt-2 text-sm text-slate">Learn more →</p>
+              <div className="heading card-title text-lg font-semibold">{s.title}</div>
+              <p className="mt-2 text-sm text-slate/80">Learn more →</p>
             </Link>
           ))}
         </div>
@@ -32,4 +32,3 @@ export default function ServiceGrid() {
     </section>
   );
 }
-

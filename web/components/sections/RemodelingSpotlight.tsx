@@ -23,7 +23,7 @@ const items = [
 
 export default function RemodelingSpotlight() {
   return (
-    <section className="section">
+    <section className="section sand-bg">
       <div className="container">
         <div className="grid gap-6 md:grid-cols-2 items-center">
           <div>

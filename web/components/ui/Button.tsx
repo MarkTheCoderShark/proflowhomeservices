@@ -24,8 +24,8 @@ export default function Button({
     "heading inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-aqua/60";
   const styles =
     variant === "primary"
-      ? "bg-aqua text-white shadow-sm hover:opacity-90"
-      : "border border-aqua text-aqua hover:bg-aqua/10";
+      ? "bg-deep-teal text-white shadow-sm hover:bg-[#1C706B]"
+      : "border border-deep-teal text-deep-teal hover:bg-deep-teal/10";
 
   function handleClick(event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) {
     if (analyticsEvent) {
