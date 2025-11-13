@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="rounded-md bg-white px-4 py-2 text-viridian-900 heading text-sm font-semibold shadow-sm hover:bg-mint_cream-100 transition"
+            className="rounded-md border border-white text-white px-4 py-2 heading text-sm font-medium hover:bg-white hover:text-green-700 transition"
             onClick={() => track("cta_click", { location: "navbar", label: "get_estimate" })}
           >
             Get Estimate
@@ -79,7 +79,7 @@ export default function Navbar() {
                 track("cta_click", { location: "mobile_nav", label: "get_estimate" });
                 setOpen(false);
               }}
-              className="rounded-md bg-white px-4 py-2 text-viridian-900 heading text-sm font-semibold shadow-sm hover:bg-mint_cream-100 transition inline-flex w-max"
+              className="rounded-md border border-white text-white px-4 py-2 heading text-sm font-medium hover:bg-white hover:text-green-700 transition inline-flex w-max"
             >
               Get Estimate
             </Link>
