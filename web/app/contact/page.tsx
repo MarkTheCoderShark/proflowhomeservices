@@ -168,18 +168,27 @@ export default function Contact() {
             Find Us in Roseville
           </h2>
           <div className="max-w-4xl mx-auto rounded-lg overflow-hidden border-2 border-mint_green-200 shadow-md">
-            <div className="aspect-[16/9] bg-slate-100 flex items-center justify-center text-slate-600">
-              <div className="text-center p-8">
-                <MapPin className="w-12 h-12 mx-auto mb-3 text-viridian-600" />
-                <p className="text-lg font-medium">Google Maps Embed</p>
-                <p className="text-sm mt-2 text-slate-500">
-                  1508 Eureka Rd Suite 170, Roseville, CA 95661
-                </p>
-                <p className="text-xs mt-1 text-slate-400">
-                  (Map will be embedded once GBP is verified)
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://maps.google.com/maps?q=1508+Eureka+Rd+Suite+170,+Roseville,+CA+95661&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="ProFlow Home Services Office Location - 1508 Eureka Rd Suite 170, Roseville, CA 95661"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.google.com/maps/dir//1508+Eureka+Rd+Suite+170,+Roseville,+CA+95661"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-viridian-600 hover:text-viridian-700 font-medium transition"
+            >
+              <MapPin className="w-4 h-4" />
+              Get Directions to Our Office
+            </a>
           </div>
         </div>
       </section>
