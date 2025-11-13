@@ -19,15 +19,15 @@ export default function Hero({ title, subtitle, primaryCta, secondaryCta, backgr
         backgroundPosition: "center",
       } : undefined}
     >
-      {/* Neutral overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-800/60" />
+      {/* Gradient overlay for maximum text visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/10" />
       <div className="container relative section">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className={`heading text-4xl sm:text-5xl font-bold leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : 'text-viridian-900'}`}>
+          <h1 className={`heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight ${backgroundImage ? 'text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]' : 'text-viridian-900'}`}>
             {title}
           </h1>
           {subtitle ? (
-            <p className={`mt-4 text-lg sm:text-xl ${backgroundImage ? 'text-white drop-shadow-md' : 'text-slate-700'}`}>{subtitle}</p>
+            <p className={`mt-4 text-lg md:text-xl leading-relaxed ${backgroundImage ? 'text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]' : 'text-slate-700'}`}>{subtitle}</p>
           ) : null}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             {primaryCta ? (
