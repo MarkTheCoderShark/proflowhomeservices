@@ -1,11 +1,11 @@
 export default function PhotoShowcase() {
   const photos = [
-    { image: "/tech1.jpeg", caption: "Our Professional Team" },
-    { image: "/tech2.jpeg", caption: "Ready to Serve" },
-    { image: "/techbytruck.jpeg", caption: "ProFlow Fleet" },
-    { image: "/remodel-kitchen.jpeg", caption: "Quality Craftsmanship" },
-    { image: "/bathroom.jpeg", caption: "Attention to Detail" },
-    { image: "/lvp-flooring.jpeg", caption: "Beautiful Results" },
+    { image: "/behindscenes1.jpeg", caption: "Team in Action" },
+    { image: "/behindscenes2.jpeg", caption: "Quality Workmanship" },
+    { image: "/behindscenes3.jpeg", caption: "Professional Service" },
+    { image: "/behindscenes4.jpeg", caption: "Attention to Detail" },
+    { image: "/behindscenes5.jpeg", caption: "On the Job" },
+    { image: "/hero-service-gutter-cleaning.jpeg", caption: "Gutter Cleaning Service" },
   ];
 
   return (

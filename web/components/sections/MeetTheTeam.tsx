@@ -9,13 +9,13 @@ export default function MeetTheTeam() {
     {
       name: "Our Professional Crew",
       role: "Licensed Technicians & Craftsmen",
-      image: "/tech2.jpeg",
+      image: "/ourtechs.jpeg",
       bio: "Our team of skilled professionals brings decades of combined experience in gutters, painting, handyman services, and full-scale remodeling. Every crew member is background-checked, trained, and committed to excellence."
     },
     {
       name: "ProFlow360™ Team",
       role: "Operations & Customer Support",
-      image: "/techbytruck.jpeg",
+      image: "/proflow360.jpeg",
       bio: "Behind every job is our dedicated operations team, ensuring seamless scheduling, clear communication, and real-time updates through our proprietary ProFlow360™ system."
     },
   ];
@@ -35,7 +35,7 @@ export default function MeetTheTeam() {
         <div className="grid md:grid-cols-3 gap-8">
           {team.map((member) => (
             <div key={member.name} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="aspect-[4/3] bg-cover bg-center" style={{ backgroundImage: `url(${member.image})` }} />
+              <div className="aspect-[4/3] bg-cover" style={{ backgroundImage: `url(${member.image})`, backgroundPosition: '70% center' }} />
               <div className="p-6">
                 <h3 className="heading text-xl font-bold text-viridian-900">{member.name}</h3>
                 <p className="text-viridian-600 font-semibold text-sm mt-1">{member.role}</p>
