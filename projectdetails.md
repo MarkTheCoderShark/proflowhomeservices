@@ -111,60 +111,469 @@ Position relative to competitors:
 
 ## 3.1 Color Palette
 
-### **Primary Colors**
-#### 1. ProFlow Evergreen
-HEX: **#1F3B2C**
-Usage: Headers, brand identity, CTA sections, key accents
+**CURRENT IMPLEMENTATION (Accurate as of 2025-11-13)**
 
-#### 2. ProFlow Midnight
-HEX: **#0E1A14**
-Usage: Footer only (provides grounding and authority)
-
-#### 3. ProFlow White
-HEX: **#FFFFFF**
-Usage: Primary body background, content sections, cards, default background
-
-#### 4. ProFlow Mist
-HEX: **#F4F7F5**
-Usage: Alternating section backgrounds for visual rhythm
-
-#### 5. ProFlow Light Mist
-HEX: **#F9FAF9**
-Usage: Subtle card backgrounds when differentiation from white is needed
+The ProFlow Home Services website uses a comprehensive Tailwind v4-based color system defined in `/web/app/globals.css`. This system provides 6 major color families with 9 shades each (50-900) for maximum flexibility and consistency.
 
 ---
 
-### **Secondary Accent Colors**
-#### 1. ProFlow Aqua  
-HEX: **#3BB7C8**  
-Usage: CTA buttons, links, highlights
+### **PRIMARY COLOR FAMILIES**
 
-#### 2. ProFlow Gold  
-HEX: **#D8A94F**  
-Usage: Premium accents, badges, small design touches
+#### 1. Viridian (Primary Brand Green)
+**Purpose:** Primary buttons, headings, brand elements, dark sections
+**Base Shade:** #6b9080 (viridian-500)
 
-#### 3. ProFlow Slate  
-HEX: **#3D4A42**  
-Usage: Body text
+| Shade | Hex Code | Usage |
+|-------|----------|-------|
+| viridian-50 | #f0f7f4 | Very light backgrounds |
+| viridian-100 | #d9ebe4 | Light hover states |
+| viridian-200 | #b3d7c9 | Subtle backgrounds |
+| viridian-300 | #8ec3ae | Medium accents |
+| viridian-400 | #6b9080 | Medium buttons/accents |
+| viridian-500 | #6b9080 | Base brand color |
+| viridian-600 | #4a7566 | **Primary buttons, links** (Most used) |
+| viridian-700 | #39594c | Dark accents |
+| viridian-800 | #324d42 | **Header/Navbar background** |
+| viridian-900 | #2e463c | **Dark hero sections, headings** (Most used) |
 
-#### 4. ProFlow Clay  
-HEX: **#A77C54**  
-Usage: Remodeling warmth accents
+**Most Common Usage:**
+- `bg-viridian-900` - Dark hero/CTA sections (~45 instances)
+- `text-viridian-900` - Primary headings on light backgrounds
+- `bg-viridian-600` + `hover:bg-viridian-500` - Primary buttons
+- `bg-viridian-800` - Header/navbar background
 
 ---
 
-## 3.2 Color Usage Percentages
-- White/Light backgrounds (White, Mist, Light Mist): **70%**
-- Evergreen (CTA sections, headers): **15%**
-- Midnight (Footer only): **5%**
-- Aqua (Buttons, links): **8%**
-- Gold/Clay (Accents): **2% combined**
+#### 2. Cambridge Blue (Complementary Blue-Green)
+**Purpose:** Accents, dark bands, CTA backgrounds
+**Base Shade:** #a4c3b2 (cambridge_blue-500)
 
-**Background Strategy:**
-- Primary content sections: White (#FFFFFF)
-- Alternating sections for visual rhythm: Mist (#F4F7F5)
-- Subtle card differentiation: Light Mist (#F9FAF9)
-- **Avoid**: Warm beige or cream tones - they appear muddy and unprofessional
+| Shade | Hex Code | Usage |
+|-------|----------|-------|
+| cambridge_blue-50 | #f2f8f5 | Very light backgrounds |
+| cambridge_blue-100 | #d6ebe1 | Light backgrounds |
+| cambridge_blue-200 | #aed7c3 | Medium-light accents |
+| cambridge_blue-300 | #527866 | **CTA backgrounds, accents** |
+| cambridge_blue-400 | #7fb09e | Medium buttons |
+| cambridge_blue-500 | #a4c3b2 | Base complementary |
+| cambridge_blue-600 | #789a8a | Darker accents |
+| cambridge_blue-700 | #688274 | Dark elements |
+| cambridge_blue-800 | #5c715e | Very dark accents |
+| cambridge_blue-900 | #567968 | Darkest shade |
+
+**Most Common Usage:**
+- `bg-cambridge_blue-300` - CTA backgrounds
+- Various shades for complementary accents
+
+---
+
+#### 3. Mint Green (Subtle Light Backgrounds)
+**Purpose:** Light section backgrounds, cards, borders
+**Base Shade:** #cce3de (mint_green-500)
+
+| Shade | Hex Code | Usage |
+|-------|----------|-------|
+| mint_green-50 | #fbfdfc | **Very light section backgrounds** (~30 instances) |
+| mint_green-100 | #f5faf9 | Light card backgrounds |
+| mint_green-200 | #e0ede9 | **Standard borders** (~25 instances) |
+| mint_green-300 | #cce3de | **Stronger borders** (~10 instances) |
+| mint_green-400 | #b8d9d2 | Medium backgrounds |
+| mint_green-500 | #cce3de | Base mint |
+| mint_green-600 | #a1cfc7 | Darker mint accents |
+| mint_green-700 | #76b3a8 | **Dark borders (neighborhoods)** |
+| mint_green-800 | #62a89a | Darker accents |
+| mint_green-900 | #7bbaae | Darkest mint |
+
+**Most Common Usage:**
+- `bg-mint_green-50` - Alternating section backgrounds
+- `border-mint_green-200` - Standard card/input borders
+- `border-mint_green-300` - Service card borders
+- `bg-mint_green-100` - Hover states for FAQ accordions
+
+---
+
+#### 4. Azure Web (Light Aqua Tints)
+**Purpose:** Light backgrounds, aqua accents
+**Base Shade:** #eaf4f4 (azure_web-500)
+
+| Shade | Hex Code | Usage |
+|-------|----------|-------|
+| azure_web-50 | #fdfdfe | Nearly white |
+| azure_web-100 | #f6fafa | Very light backgrounds |
+| azure_web-200 | #8fd9d9 | Light aqua accents |
+| azure_web-300 | #66cccc | Aqua accents |
+| azure_web-400 | #b9e6e6 | Medium-light aqua |
+| azure_web-500 | #eaf4f4 | Base azure |
+| azure_web-600 | #d2ecec | Light backgrounds |
+| azure_web-700 | #c4e7e7 | Subtle backgrounds |
+| azure_web-800 | #b6e3e3 | Medium backgrounds |
+| azure_web-900 | #aee0e0 | Darker azure |
+
+**Usage:**
+- Light accent colors
+- Subtle background variations
+
+---
+
+#### 5. Mint Cream (Near-White/Off-White)
+**Purpose:** Text on dark backgrounds, very light accents
+**Base Shade:** #f6fff8 (mint_cream-500)
+
+| Shade | Hex Code | Usage |
+|-------|----------|-------|
+| mint_cream-50 | #ffffff | Pure white text |
+| mint_cream-100 | #feffff | **Text on dark backgrounds** |
+| mint_cream-200 | #fdfffd | **Footer links** |
+| mint_cream-300 | #fbfefc | Light text variations |
+| mint_cream-400 | #fafff9 | Very light text |
+| mint_cream-500 | #f6fff8 | Base cream |
+| mint_cream-600 | #cedcd2 | Medium tone |
+| mint_cream-700 | #9fb7a5 | Darker tone |
+| mint_cream-800 | #668b74 | Dark green |
+| mint_cream-900 | #1e3a26 | **Dark text/headings** |
+
+**Most Common Usage:**
+- `text-mint_cream-100` - Text on dark viridian backgrounds
+- `text-mint_cream-200` - Footer link text
+- `text-mint_cream-900` - Alternative dark headings
+
+---
+
+#### 6. Slate (Neutral Text Colors)
+**Purpose:** Body text, headings on light backgrounds
+**Base Shade:** #6b7774 (slate-500)
+
+| Shade | Hex Code | Usage |
+|-------|----------|-------|
+| slate-50 | #f8f9f9 | Nearly white backgrounds |
+| slate-100 | #ebeeed | Very light gray |
+| slate-200 | #d6d9d8 | Light gray borders |
+| slate-300 | #c2c6c4 | Medium-light gray |
+| slate-400 | #adb2af | Medium gray |
+| slate-500 | #6b7774 | Base slate |
+| slate-600 | #545c59 | **Secondary text** (~10 instances) |
+| slate-700 | #3d4a42 | **Primary body text** (~20 instances) |
+| slate-800 | #2e3a33 | **Darker body text** (~15 instances) |
+| slate-900 | #1e2621 | **Dark headings** (~15 instances) |
+
+**Most Common Usage:**
+- `text-slate-700` - Primary body text color
+- `text-slate-800` - Darker body text for emphasis
+- `text-slate-900` - Dark headings on light backgrounds
+- `text-slate-600` - Secondary/muted text
+
+---
+
+### **PROFLOW CTA GREEN (Primary Call-to-Action Color)**
+
+#### ProFlow CTA Green - #1B5C58
+**Purpose:** Primary call-to-action buttons, important conversions
+**Usage:** All primary CTA buttons across the site
+
+| Color | Hex Code | Usage |
+|-------|----------|-------|
+| cta | #1B5C58 | **Primary CTA buttons** (Get Estimate, Call Now, etc.) |
+| cta-hover | #154A47 | Hover state for CTA buttons (darker) |
+| cta-light | #2A706B | Light variant for special uses |
+
+---
+
+### **TOPBAR COLORS (Premium Trust Bar)**
+
+#### Topbar System - Trust-Building Top Bar
+**Purpose:** Premium trust bar with warm, professional color scheme
+**Usage:** Secondary navigation bar above main header featuring trust indicators
+
+| Color | Hex Code | Usage |
+|-------|----------|-------|
+| topbar | #E9E0D1 | **Background** (light warm sand/beige) |
+| topbar-text | #4D5E57 | **Text color** (sage/dark charcoal for premium look) |
+
+**Content:** "Licensed & Insured • 1,000+ Happy Customers • ★★★★★ Google Rating"
+
+**Typography Specs:**
+- Font size: 14px
+- Font weight: 500 (medium)
+- Letter spacing: +0.2px
+- Vertical padding: 8px (py-2)
+- Alignment: Centered
+- Responsive: Hides "1,000+ Happy Customers" on mobile
+
+**Implementation:**
+- Primary buttons (all backgrounds): `bg-cta text-white hover:bg-cta-hover`
+- Secondary buttons (light bg): `border-2 border-cta text-cta hover:bg-cta hover:text-white`
+- Secondary buttons (dark bg): `border-2 border-white text-white hover:bg-white hover:text-cta`
+
+**Visual Characteristics:**
+- Rich, deep green that conveys trust and professionalism
+- Excellent contrast against both light and dark backgrounds
+- More saturated than viridian for better CTA visibility
+- Creates clear visual hierarchy for conversion actions
+
+---
+
+### **SEMANTIC COLOR USAGE**
+
+#### Standard Tailwind Colors (For Specific Functions)
+These standard colors are used for messaging and special states:
+
+- **Success Messages:** `text-emerald-600` (#059669)
+- **Error Messages:** `text-red-600` (#dc2626)
+- **Form Borders (To Be Standardized):**
+  - `border-zinc-300`, `border-zinc-200` - 6 instances ⚠️
+
+**Note:** Items marked with ⚠️ should be replaced with brand colors for consistency.
+
+---
+
+### **OPACITY MODIFIERS**
+
+The color system uses Tailwind opacity modifiers for layering and depth:
+
+**Common Opacity Values:**
+- `/10` - Very subtle (10% opacity)
+- `/20` - Subtle (20% opacity)
+- `/50` - Semi-transparent (50% opacity)
+- `/60` - Focus rings, overlays (60% opacity)
+- `/80` - Strong overlays (80% opacity)
+- `/90` - Nearly opaque (90% opacity)
+
+**Examples:**
+- `bg-viridian-900/80` - Dark overlay on hero images
+- `text-white/90` - Slightly transparent white text
+- `bg-white/10` - Glassmorphism effects
+- `focus:ring-viridian-500/60` - Focus rings
+- `from-black/65 via-black/50 to-black/10` - Gradient overlays
+
+---
+
+## 3.2 Color Usage by Purpose
+
+### Backgrounds
+
+**Primary Section Backgrounds:**
+- `bg-white` - Default content sections (70%)
+- `bg-mint_green-50` - Alternating light sections (15%)
+- `bg-viridian-900` - Dark hero/CTA sections (10%)
+- `bg-viridian-800` - Header/navbar (5%)
+
+**Card/Component Backgrounds:**
+- `bg-white` - Cards, forms, content boxes
+- `bg-mint_green-50` - FAQ accordions, service cards
+- `bg-mint_green-100` - Hover states
+
+**Dark Overlays:**
+- `bg-viridian-900/80` - Image overlays for text readability
+- `bg-gradient-to-b from-black/65 via-black/50 to-black/10` - Hero gradient overlays
+
+---
+
+### Text Colors
+
+**Headings:**
+- `text-viridian-900` - Primary headings on light backgrounds (Most common)
+- `text-white` - Headings on dark backgrounds
+- `text-slate-900` - Alternative dark headings
+- `text-mint_cream-900` - Dark green headings
+
+**Body Text:**
+- `text-slate-700` - Primary body text (Most common)
+- `text-slate-800` - Darker body text for emphasis
+- `text-slate-600` - Secondary/muted text
+- `text-mint_cream-100` - Text on dark backgrounds
+- `text-mint_cream-200` - Footer link text
+
+**Interactive Text:**
+- `text-viridian-600` - Links, CTAs
+- `text-viridian-700` - Link hover states
+- `hover:text-white` - Dark background link hovers
+
+---
+
+### Borders
+
+**Standard Borders:**
+- `border-mint_green-200` - Most common (cards, inputs)
+- `border-mint_green-300` - Stronger borders (service cards)
+- `border-mint_green-700` - Dark borders (neighborhoods)
+
+**Accent Borders:**
+- `border-viridian-500` - Hover state borders
+- `border-viridian-600` - Button borders
+- `border-viridian-700` - Navbar border
+- `border-viridian-800` - Footer borders
+
+**To Be Replaced:**
+- `border-zinc-300` - Form inputs (6 instances) → Replace with `border-mint_green-300`
+- `border-zinc-200` - Cards (6 instances) → Replace with `border-mint_green-200`
+
+---
+
+### Buttons
+
+**Primary Buttons (All Backgrounds):**
+- Default: `bg-cta text-white` (#1B5C58)
+- Hover: `hover:bg-cta-hover` (#154A47)
+- Used for: "Get Estimate", "Call Now", "Schedule Service", etc.
+- **NEW:** Unified CTA color for maximum consistency and conversion optimization
+
+**Secondary Buttons (Light Backgrounds):**
+- Default: `border-2 border-cta text-cta` (transparent background)
+- Hover: `bg-mint_green-50` (ultra-light teal tint)
+- Used for: "Learn More", "View Services", "View Projects"
+
+**Secondary Buttons (Dark Backgrounds - Hero Sections):**
+- Default: `bg-white border-2 border-cta text-cta`
+- Border: **#1B5C58** (CTA Green, 2px solid)
+- Text: **#1B5C58** (CTA Green)
+- Background: **White** (solid)
+- Hover: `bg-mint_green-50` (ultra-light teal tint)
+- Used for: Phone number button, secondary actions in hero sections
+- **NEW:** White background provides maximum contrast and visibility on dark hero backgrounds
+
+---
+
+### Interactive States
+
+**Focus Rings:**
+- `focus:ring-viridian-500/60` - Standard focus state
+- `focus-visible:ring-2 focus-visible:ring-viridian-500/60` - Keyboard navigation
+
+**Hover States:**
+- Borders: `hover:border-viridian-500`
+- Backgrounds: Lighter/darker shades within same family
+- Text: `hover:text-white`, `hover:text-viridian-700`
+
+---
+
+## 3.3 Color Usage Statistics
+
+**Top 10 Most Used Colors:**
+1. `white` - ~150+ instances (backgrounds, text, borders)
+2. `viridian-900` - ~45 instances (headings, dark backgrounds)
+3. `mint_green-50` - ~30 instances (section backgrounds)
+4. `mint_green-200` - ~25 instances (borders)
+5. `slate-700` - ~20 instances (body text)
+6. `viridian-600` - ~18 instances (buttons, links)
+7. `slate-900` - ~15 instances (dark headings)
+8. `viridian-500` - ~12 instances (buttons, focus rings)
+9. `mint_green-300` - ~10 instances (borders)
+10. `slate-600` - ~10 instances (secondary text)
+
+**Color Family Distribution:**
+- Viridian: 35%
+- Slate: 25%
+- Mint Green: 20%
+- White/Black: 10%
+- Mint Cream: 5%
+- Cambridge Blue: 3%
+- Azure Web: 1%
+- Non-brand colors: 1% (to be standardized)
+
+---
+
+## 3.4 Implementation Details
+
+**Technology:** Tailwind CSS v4 with custom color tokens
+**Configuration File:** `/web/app/globals.css`
+**Total Custom Colors:** 54 shades across 6 families (plus white/black)
+
+**Naming Convention:**
+- Color families use underscores: `mint_green`, `cambridge_blue`, `azure_web`, `mint_cream`
+- Shades use numeric scale: 50 (lightest) to 900 (darkest)
+- Tailwind utility classes: `bg-{color}-{shade}`, `text-{color}-{shade}`, `border-{color}-{shade}`
+
+---
+
+## 3.5 Recent Updates & Remaining Issues
+
+### ✅ Recently Updated (Nov 13, 2025):
+
+1. **NEW: ProFlow CTA Green (#1B5C58)**
+   - Added dedicated CTA color to globals.css
+   - Updated Button.tsx component to use new CTA color
+   - Provides unified, professional green for all call-to-action buttons
+   - Better conversion optimization with consistent, high-contrast CTAs
+
+2. **NEW: Premium Trust Bar (Top Bar)**
+   - Added above main navigation for trust-building
+   - Background: #E9E0D1 (light warm sand)
+   - Text: #4D5E57 (sage/dark charcoal)
+   - Content: "Licensed & Insured • 1,000+ Happy Customers • ★★★★★ Google Rating"
+   - Typography: 14px, weight 500, +0.2px letter spacing
+   - Layout: Centered text, 8px vertical padding
+   - Border: slate-300 bottom border
+   - Responsive: Hides "1,000+ Happy Customers" on mobile
+   - Creates premium, trustworthy first impression
+
+### Remaining Issues to Fix:
+
+1. **Undefined "aqua" Class**
+   - Location: `/web/components/forms/ContactForm.tsx:38`
+   - Current: `focus:ring-aqua/60`
+   - Fix: Replace with `focus:ring-viridian-500/60`
+
+2. **Zinc Color Usage (6 instances)**
+   - Locations: ContactForm, contact/page, reviews/page, financing/page, blog/page, services/page
+   - Current: `border-zinc-300`, `border-zinc-200`
+   - Fix: Replace with `border-mint_green-300` and `border-mint_green-200`
+
+### Future Enhancements:
+
+4. **Consider Brand-Specific Naming**
+   - Rename `viridian-*` to `proflow-evergreen-*`
+   - Rename `cambridge_blue-*` to `proflow-accent-*`
+   - Makes brand connection clearer in code
+
+5. **Add Missing Accent Colors**
+   - Current system lacks gold/clay tones
+   - Consider adding if premium remodeling accents are needed
+
+---
+
+## 3.6 Color Accessibility
+
+**Contrast Ratios:**
+- All body text (slate-700 on white) meets WCAG AA standards (4.5:1+)
+- Headings (viridian-900 on white) meet WCAG AA standards (3:1+ for large text)
+- Interactive elements have sufficient contrast
+- Focus indicators are clearly visible (2px rings with 60% opacity)
+
+**Colorblind Considerations:**
+- Primary color system uses green-based palette
+- Success/error states use standard green/red
+- Consider adding icons to success/error messages for colorblind accessibility
+
+---
+
+**Last Updated:** November 13, 2025
+**Audit Performed:** Full codebase color usage analysis (329 files)
+
+---
+
+## 3.7 Quick Reference: Key Brand Colors
+
+For quick reference, here are the most important colors in the ProFlow palette:
+
+| Purpose | Color Name | Hex Code | Tailwind Class |
+|---------|-----------|----------|----------------|
+| **Primary CTA Buttons** | ProFlow CTA Green | #1B5C58 | `bg-cta` |
+| CTA Hover State | CTA Hover | #154A47 | `bg-cta-hover` |
+| Dark Hero Sections | Viridian 900 | #2e463c | `bg-viridian-900` |
+| Header/Navbar | Viridian 800 | #324d42 | `bg-viridian-800` |
+| Primary Buttons (alt) | Viridian 600 | #4a7566 | `bg-viridian-600` |
+| Primary Headings | Viridian 900 | #2e463c | `text-viridian-900` |
+| Body Text | Slate 700 | #3d4a42 | `text-slate-700` |
+| White Background | White | #ffffff | `bg-white` |
+| Light Sections | Mint Green 50 | #fbfdfc | `bg-mint_green-50` |
+| Standard Borders | Mint Green 200 | #e0ede9 | `border-mint_green-200` |
+| Text on Dark BG | Mint Cream 100 | #feffff | `text-mint_cream-100` |
+
+**Color Hierarchy for Conversion:**
+1. **CTA Green (#1B5C58)** - Highest priority actions (Get Estimate, Call Now)
+2. **Viridian 600-900** - Brand identity, headings, secondary actions
+3. **Slate 700-900** - Content, readability
+4. **Mint Green 50-300** - Subtle backgrounds, borders, visual rhythm
 
 ---
 

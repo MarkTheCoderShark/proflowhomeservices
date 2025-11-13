@@ -89,6 +89,17 @@
   --color-slate-800: #2a3630;  /* Dark - for body text */
   --color-slate-900: #1e2621;  /* Darkest - for headings */
 
+  /* === PROFLOW CTA GREEN: Primary Call-to-Action Color === */
+  /* Rich, professional green for primary CTAs and important buttons */
+  --color-cta: #1B5C58;  /* Primary CTA color */
+  --color-cta-hover: #154A47;  /* Darker hover state */
+  --color-cta-light: #2A706B;  /* Lighter variant */
+
+  /* === TOPBAR BEIGE: Secondary Navigation Bar === */
+  /* Warm, inviting beige for top contact bar */
+  --color-topbar: #E9E0D1;  /* Warm beige/cream for topbar background */
+  --color-topbar-text: #4D5E57;  /* Sage/dark charcoal for premium topbar text */
+
   /* === WHITE (for explicit use) === */
   --color-white: #ffffff;
   --color-black: #000000;

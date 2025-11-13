@@ -20,7 +20,28 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 bg-viridian-800 border-b border-viridian-700">
+    <header className="sticky top-0 z-40">
+      {/* Secondary Top Bar - Trust Indicators */}
+      <div className="bg-topbar border-b border-slate-300">
+        <div className="container">
+          <div className="py-2 text-center">
+            <p
+              className="text-topbar-text font-medium"
+              style={{
+                fontSize: '14px',
+                fontWeight: 500,
+                letterSpacing: '0.2px'
+              }}
+            >
+              <span className="hidden md:inline">Licensed & Insured • 1,000+ Happy Customers • ★★★★★ Google Rating</span>
+              <span className="md:hidden">Licensed & Insured • ★★★★★ Google Rating</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation Bar */}
+      <div className="bg-viridian-800 border-b border-viridian-700">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center -my-4">
           <img src="/logo2.png" alt="ProFlow Home Services" className="h-32" />
@@ -86,6 +107,7 @@ export default function Navbar() {
           </div>
         </div>
       )}
+      </div>
     </header>
   );
 }

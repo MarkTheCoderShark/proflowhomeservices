@@ -16,11 +16,11 @@ export default function Home() {
       <Hero
         title={
           <>
-            Complete Home Services, Repairs & Remodeling You Can Trust.
+            Home Services & Remodeling Done Right.
           </>
         }
         subtitle={
-          <>Serving Sacramento, Roseville, Rocklin & surrounding cities with gutters, painting, handyman work, pressure washing, and premium remodeling services.</>
+          <>Serving Sacramento, Roseville, Rocklin & surrounding areas with trusted gutter, painting, handyman, pressure washing, and full-service remodeling solutions.</>
         }
         primaryCta={{ label: "Get Free Estimate", href: "/contact" }}
         secondaryCta={{ label: "Call (###) ###-####", href: "tel:" }}

@@ -25,16 +25,16 @@ export default function Button({
   const base =
     "heading inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-viridian-500/60";
 
-  // Primary buttons: Deep green (#15803D) for primary CTA
-  // Secondary buttons: Yellow (#FACC15) for maximum visibility
+  // Primary buttons: ProFlow CTA Green (#1B5C58) for all primary CTAs
+  // Secondary buttons: White background with CTA green border/text, ultra-light teal hover
   const styles =
     variant === "primary"
       ? darkBg
-        ? "bg-green-700 text-white font-semibold shadow-lg hover:bg-green-800 px-6 py-3"
-        : "bg-viridian-600 text-white font-semibold shadow-lg hover:bg-viridian-500"
+        ? "bg-cta text-white font-semibold shadow-lg hover:bg-cta-hover px-6 py-3"
+        : "bg-cta text-white font-semibold shadow-lg hover:bg-cta-hover"
       : darkBg
-      ? "bg-yellow-400 text-black font-semibold shadow-lg hover:bg-yellow-500 px-6 py-3"
-      : "border-2 border-viridian-600 text-viridian-600 font-semibold hover:bg-viridian-600 hover:text-white transition-all";
+      ? "bg-white border-2 border-cta text-cta font-semibold hover:bg-mint_green-50 px-6 py-3"
+      : "border-2 border-cta text-cta font-semibold hover:bg-mint_green-50 transition-all";
 
   function handleClick(event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) {
     if (analyticsEvent) {
