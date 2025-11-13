@@ -12,16 +12,19 @@ export type ServiceSlug =
 export type ServicePageContent = {
   heroTitle: string;
   heroSubtitle: string;
+  heroImage: string;
   overview: string;
   benefits: string[];
   process: string[];
   highlights: { title: string; desc: string }[];
+  gallery: { src: string; alt: string }[];
 };
 
 export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
   "gutter-cleaning": {
     heroTitle: "Gutter Cleaning",
     heroSubtitle: "Protect your roof, siding, and foundation with thorough debris removal and flushing.",
+    heroImage: "/hero-service-gutter-cleaning.jpeg",
     overview:
       "We hand-remove the grime your gutters collect each season, flush every downspout, and document the results with before/after photos.",
     benefits: [
@@ -40,10 +43,16 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Tech-enabled updates", desc: "ProFlow360 keeps you informed via text and photo logs." },
       { title: "Insurance ready", desc: "We document every job for your records." },
     ],
+    gallery: [
+      { src: "/gutter cleaning.jpeg", alt: "Tech clearing gutters" },
+      { src: "/hero-city-roseville.jpeg", alt: "Roseville home" },
+      { src: "/hero-city-rocklin.jpeg", alt: "Rocklin roof" },
+    ],
   },
   "gutter-guards": {
     heroTitle: "Gutter Guards",
     heroSubtitle: "Reduce cleaning frequency with professionally installed guards that actually work.",
+    heroImage: "/hero-service-gutter-cleaning.jpeg",
     overview:
       "We pair proven guard systems with precise installation so the water flows freely while debris stays out.",
     benefits: [
@@ -62,10 +71,15 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Warrantied work", desc: "Clear coverage on guards and installation." },
       { title: "Bundle friendly", desc: "Pair with cleaning or repairs for savings." },
     ],
+    gallery: [
+      { src: "/gutter cleaning.jpeg", alt: "Gutter guard close-up" },
+      { src: "/hero-service-gutter-cleaning.jpeg", alt: "Guard installation" },
+    ],
   },
   "gutter-repair-replacement": {
     heroTitle: "Gutter Repair & Replacement",
     heroSubtitle: "Fix leaks, pitch issues, or replace failing gutter sections with pro-grade materials.",
+    heroImage: "/hero-service-gutter-cleaning.jpeg",
     overview:
       "We diagnose corrosion, pinholes, and sagging runs, then repair or replace sections so water leaves your roof cleanly.",
     benefits: [
@@ -84,10 +98,15 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Experience", desc: "Hundreds of gutters serviced every year." },
       { title: "Transparent pricing", desc: "Flat-rate options and photo estimates." },
     ],
+    gallery: [
+      { src: "/gutter cleaning.jpeg", alt: "Repaired gutter" },
+      { src: "/hero-city-auburn.jpeg", alt: "Auburn home" },
+    ],
   },
   "interior-painting": {
     heroTitle: "Interior Painting",
     heroSubtitle: "Freshen rooms with crisp edges, low-VOC products, and protective masking.",
+    heroImage: "/hero-service-interior-painting.jpeg",
     overview:
       "We prep walls, patch imperfections, and apply premium paints for a showroom finish that wears well.",
     benefits: [
@@ -106,10 +125,15 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Color help", desc: "Guidance on palettes that flow with your lifestyle." },
       { title: "Quick turnaround", desc: "Efficient scheduling via ProFlow360." },
     ],
+    gallery: [
+      { src: "/hero-service-interior-painting.jpeg", alt: "Fresh interior walls" },
+      { src: "/dreamina-2025-11-12-8102-A luxurious, freshly remodeled bathroom ....jpeg", alt: "Lux bathroom" },
+    ],
   },
   "exterior-painting": {
     heroTitle: "Exterior Painting",
     heroSubtitle: "High-performance coatings that stand up to sun, rain, and temperature swings.",
+    heroImage: "/hero-service-exterior-painting.jpeg",
     overview:
       "We pressure-wash, prep, and paint exteriors with contractor-grade products so your home looks amazing for years.",
     benefits: [
@@ -129,10 +153,15 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Detail-focused", desc: "Clean lines around trims and shutters." },
       { title: "Project management", desc: "Weekly updates in ProFlow360." },
     ],
+    gallery: [
+      { src: "/hero-service-exterior-painting.jpeg", alt: "Exterior paint pro" },
+      { src: "/home-cta-background.jpeg", alt: "Home exterior" },
+    ],
   },
   handyman: {
     heroTitle: "Handyman Services",
     heroSubtitle: "Small repairs, maintenance, and punch-list tasks completed efficiently.",
+    heroImage: "/hero-service-handyman.jpeg",
     overview:
       "One phone call covers drywall, trim, fixtures, gates, and everything you’d hire a trusted handyman for.",
     benefits: [
@@ -151,10 +180,15 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Coordination", desc: "Bundle with gutter or painting projects." },
       { title: "Reliable", desc: "Same-day responses for urgent fixes." },
     ],
+    gallery: [
+      { src: "/hero-service-handyman.jpeg", alt: "Handyman working" },
+      { src: "/hero-city-roseville.jpeg", alt: "Roseville repair" },
+    ],
   },
   "pressure-washing": {
     heroTitle: "Pressure Washing",
     heroSubtitle: "Restore driveways, patios, and siding safely with calibrated pressure and detergents.",
+    heroImage: "/hero-service-pressure-washing.jpeg",
     overview:
       "We clean concrete, decking, roofs, and fences with equipment tuned for each surface and eco-friendly cleaners.",
     benefits: [
@@ -173,10 +207,15 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Eco solutions", desc: "Biodegradable soaps and responsible runoff." },
       { title: "Before/after proof", desc: "Photos shared through ProFlow360." },
     ],
+    gallery: [
+      { src: "/hero-service-pressure-washing.jpeg", alt: "Pressure washing" },
+      { src: "/home-cta-background.jpeg", alt: "Clean driveway" },
+    ],
   },
   "roof-solar-cleaning": {
     heroTitle: "Roof & Solar Cleaning",
     heroSubtitle: "Keep shingles and panels free of debris, moss, and buildup.",
+    heroImage: "/hero-service-roof-solar-cleaning.jpeg",
     overview:
       "We clean roofs and solar arrays with low-pressure techniques that won’t void warranties while improving efficiency.",
     benefits: [
@@ -195,10 +234,15 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Insurance-ready", desc: "Documentation for warranties." },
       { title: "Roof health", desc: "Spot early damage before it becomes a leak." },
     ],
+    gallery: [
+      { src: "/hero-service-roof-solar-cleaning.jpeg", alt: "Solar cleaning" },
+      { src: "/hero-city-folsom.jpeg", alt: "Folsom home" },
+    ],
   },
   "maintenance-plans": {
     heroTitle: "Maintenance Plans",
     heroSubtitle: "Schedule seasonal visits for gutters, washing, and inspections with one trusted team.",
+    heroImage: "/hero-service-gutter-cleaning.jpeg",
     overview:
       "Pick a plan for quarterly cleaning, pressure washing, or annual tune-ups and we’ll handle the reminders and scheduling.",
     benefits: [
@@ -216,6 +260,10 @@ export const serviceContent: Record<ServiceSlug, ServicePageContent> = {
       { title: "Flexible visits", desc: "Seasonal, quarterly, or custom schedules." },
       { title: "Discounted bundles", desc: "Combine gutters, washing, and handyman work." },
       { title: "ProFlow360 tracking", desc: "See every visit in one dashboard." },
+    ],
+    gallery: [
+      { src: "/hero-service-gutter-cleaning.jpeg", alt: "Maintenance visit" },
+      { src: "/home-cta-background.jpeg", alt: "Home after service" },
     ],
   },
 };
