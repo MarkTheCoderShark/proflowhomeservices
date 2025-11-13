@@ -19,17 +19,17 @@ export default function Hero({ title, subtitle, primaryCta, secondaryCta, backgr
         backgroundPosition: "center",
       } : undefined}
     >
-      {/* Darker overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-viridian-900/60 to-viridian-900/70" />
+      {/* Neutral overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-800/60" />
       <div className="container relative section">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
           <h1 className={`heading text-4xl sm:text-5xl font-bold leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : 'text-viridian-900'}`}>
             {title}
           </h1>
           {subtitle ? (
             <p className={`mt-4 text-lg sm:text-xl ${backgroundImage ? 'text-white drop-shadow-md' : 'text-slate-700'}`}>{subtitle}</p>
           ) : null}
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             {primaryCta ? (
               <Button asChild href={primaryCta.href} darkBg={!!backgroundImage}>
                 {primaryCta.label}
