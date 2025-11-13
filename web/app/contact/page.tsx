@@ -28,7 +28,11 @@ export default function Contact() {
         <aside className="space-y-4">
           <div>
             <div className="heading text-lg font-semibold text-viridian-500">Call Us</div>
-            <p className="mt-1 text-slate">(###) ###-####</p>
+            <p className="mt-1 text-slate">
+              <a href="tel:+19167407249" className="hover:text-viridian-600 transition-colors">
+                (916) 740-7249
+              </a>
+            </p>
           </div>
           <div>
             <div className="heading text-lg font-semibold text-viridian-500">Hours</div>

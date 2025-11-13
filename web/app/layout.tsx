@@ -93,7 +93,7 @@ export default function RootLayout({
               "Granite Bay",
               "Lincoln",
             ],
-            telephone: "(###) ###-####",
+            telephone: "(916) 740-7249",
             brand: {
               "@type": "Brand",
               name: "ProFlow Home Services",

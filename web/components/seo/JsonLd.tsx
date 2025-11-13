@@ -43,7 +43,7 @@ export function ServiceJsonLd({
       "@type": "LocalBusiness",
       name: "ProFlow Home Services",
       url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com",
-      telephone: "(###) ###-####",
+      telephone: "(916) 740-7249",
       areaServed,
     },
     description,
@@ -69,7 +69,7 @@ export function WebSiteJsonLd() {
 export function LocalBusinessJsonLd({
   name = "ProFlow Home Services",
   url = process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com",
-  telephone = "(###) ###-####",
+  telephone = "(916) 740-7249",
   areaServed = [
     "Sacramento",
     "Roseville",

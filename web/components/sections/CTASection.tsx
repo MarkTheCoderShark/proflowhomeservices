@@ -33,12 +33,12 @@ export default function CTASection() {
             <Button
               variant="secondary"
               asChild
-              href="tel:"
+              href="tel:+19167407249"
               darkBg
               className="text-lg"
               analyticsEvent={{ name: "call_click", params: { location: "bottom", label: "call_cta" } }}
             >
-              Call (###) ###-####
+              Call (916) 740-7249
             </Button>
           </div>
           <p className="mt-4 text-sm text-mint_cream-200">
