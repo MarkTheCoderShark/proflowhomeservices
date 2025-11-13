@@ -8,14 +8,14 @@ const list: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="section">
+    <section className="section bg-white">
       <div className="container">
-        <h2 className="heading text-2xl sm:text-3xl font-semibold text-evergreen">What Homeowners Say</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <h2 className="heading text-2xl sm:text-3xl font-semibold text-viridian-900">What Homeowners Say</h2>
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
           {list.map((t) => (
-            <figure key={t.name} className="rounded-lg border border-zinc-200 bg-white p-5">
-              <blockquote className="text-slate">“{t.quote}”</blockquote>
-              <figcaption className="mt-3 heading text-sm text-evergreen">— {t.name}</figcaption>
+            <figure key={t.name} className="rounded-lg border-2 border-mint_green-200 bg-mint_green-50 p-6 shadow-sm">
+              <blockquote className="text-slate-700 leading-relaxed">"{t.quote}"</blockquote>
+              <figcaption className="mt-4 heading text-sm font-semibold text-viridian-700">— {t.name}</figcaption>
             </figure>
           ))}
         </div>

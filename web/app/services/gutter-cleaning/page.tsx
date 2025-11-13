@@ -7,7 +7,7 @@ import { serviceContent } from "@/data/services";
 export const metadata = seoMetadata({
   title: "Gutter Cleaning in Sacramento & Nearby Cities",
   description:
-    "Professional gutter cleaning for Sacramento, Roseville, Rocklin, and nearby cities. Prevent damage and keep water flowing right.",
+    "Professional gutter cleaning in Sacramento, Roseville & Rocklin. Prevent water damage and foundation issues. Get your free estimate today!",
   path: "/services/gutter-cleaning",
 });
 

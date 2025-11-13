@@ -1,59 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAF9F7;
-  --foreground: #1F3B2C;
-  --charcoal: #1D2A27;
-  --deep-teal: #1B5C58;
-  --sage: #4D5E57;
-  --soft-gray: #E5E5E5;
+  --background: #ffffff;
+  --foreground: #1e2621;
 }
 
-/* ProFlow Brand Theme Tokens (Tailwind v4 @theme) */
+/* ProFlow Professional Color System - Tailwind v4 */
 @theme inline {
-  /* Map CSS variables to Tailwind tokens */
+  /* Base colors mapped to tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Brand Colors */
-  --color-evergreen: #1F3B2C; /* Primary */
-  --color-midnight: #0E1A14; /* Dark sections */
-  --color-mist: #F4F7F5;     /* Light backgrounds */
-  --color-aqua: #3BB7C8;     /* Primary CTA */
-  --color-gold: #D8A94F;     /* Premium accents */
-  --color-slate: #3D4A42;    /* Body text */
-  --color-clay: #A77C54;     /* Warm accents */
+  /* === VIRIDIAN: Primary Brand Green === */
+  /* Used for: primary buttons, headings, brand elements */
+  --color-viridian-50: #f0f7f4;
+  --color-viridian-100: #e1e9e6;
+  --color-viridian-200: #c3d3cc;
+  --color-viridian-300: #a5bdb3;
+  --color-viridian-400: #87a799;
+  --color-viridian-500: #6b9080;  /* Base */
+  --color-viridian-600: #5c826f;
+  --color-viridian-700: #4d6e5e;
+  --color-viridian-800: #3d5a4d;
+  --color-viridian-900: #2e463c;
+
+  /* === CAMBRIDGE BLUE: Complementary Blue-Green === */
+  /* Used for: accents, dark bands, CTAs */
+  --color-cambridge_blue-50: #f2f8f5;
+  --color-cambridge_blue-100: #ecf3ef;
+  --color-cambridge_blue-200: #dae7e0;
+  --color-cambridge_blue-300: #527866;  /* Dark - for CTA backgrounds */
+  --color-cambridge_blue-400: #b5cfc1;
+  --color-cambridge_blue-500: #a4c3b2;  /* Base */
+  --color-cambridge_blue-600: #93b8a3;
+  --color-cambridge_blue-700: #7fa392;
+  --color-cambridge_blue-800: #6a8e7d;
+  --color-cambridge_blue-900: #567968;
+
+  /* === MINT GREEN: Subtle Light Backgrounds === */
+  /* Used for: light section backgrounds, cards */
+  --color-mint_green-50: #fbfdfc;
+  --color-mint_green-100: #f5faf9;
+  --color-mint_green-200: #ebf4f2;
+  --color-mint_green-300: #e1efec;
+  --color-mint_green-400: #d8e9e5;
+  --color-mint_green-500: #cce3de;  /* Base */
+  --color-mint_green-600: #b8d9d2;
+  --color-mint_green-700: #a3cec6;  /* Borders */
+  --color-mint_green-800: #8fc4ba;
+  --color-mint_green-900: #7bbaae;
+
+  /* === AZURE WEB: Light Aqua Tints === */
+  /* Used for: light backgrounds, accents */
+  --color-azure_web-50: #fdfdfe;
+  --color-azure_web-100: #fbfdfd;
+  --color-azure_web-200: #8fd9d9;  /* Medium - for hover states */
+  --color-azure_web-300: #66cccc;  /* Bright - for links/accents */
+  --color-azure_web-400: #f3f9f9;
+  --color-azure_web-500: #eaf4f4;  /* Base */
+  --color-azure_web-600: #d6eded;
+  --color-azure_web-700: #c2e6e6;
+  --color-azure_web-800: #f7fbfb;  /* Very light - for backgrounds */
+  --color-azure_web-900: #aee0e0;
+
+  /* === MINT CREAM: Near-White / Off-White === */
+  /* Used for: text on dark backgrounds, very light accents */
+  --color-mint_cream-50: #ffffff;   /* Pure white - for text on dark */
+  --color-mint_cream-100: #fdfffd;  /* Near white */
+  --color-mint_cream-200: #fbfffc;  /* Very light */
+  --color-mint_cream-300: #f9fffa;
+  --color-mint_cream-400: #f7fff9;
+  --color-mint_cream-500: #f6fff8;  /* Base */
+  --color-mint_cream-600: #e8f7ed;  /* Light tint - for subtle text */
+  --color-mint_cream-700: #d4eed9;  /* Medium tint - for muted text */
+  --color-mint_cream-800: #c0e5c6;
+  --color-mint_cream-900: #1e3a26;  /* Dark green - for text/headings */
+
+  /* === SLATE: Neutral Text Colors === */
+  /* Used for: body text, headings on light backgrounds */
+  --color-slate-50: #f8f9f9;
+  --color-slate-100: #f1f3f2;
+  --color-slate-200: #e3e6e5;
+  --color-slate-300: #c7cccb;
+  --color-slate-400: #99a29f;
+  --color-slate-500: #6b7774;
+  --color-slate-600: #546660;
+  --color-slate-700: #3d4a42;  /* Medium - for secondary text */
+  --color-slate-800: #2a3630;  /* Dark - for body text */
+  --color-slate-900: #1e2621;  /* Darkest - for headings */
+
+  /* === WHITE (for explicit use) === */
+  --color-white: #ffffff;
+  --color-black: #000000;
 
   /* Typography */
   --font-sans: var(--font-inter);
   --font-heading: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-white);
+  color: var(--color-slate-800);
   font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-}
-
-.section-dark {
-  background: var(--charcoal);
-}
-
-.section-soft {
-  background: #FFFFFF;
-}
-
-.card-soft {
-  background: #FAF9F7;
-  border: 1px solid var(--soft-gray);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Utilities */
@@ -61,23 +112,23 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
-  padding-left: 1.5rem; /* 24px */
-  padding-right: 1.5rem; /* 24px */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .heading {
   font-family: var(--font-montserrat), ui-sans-serif, system-ui, -apple-system,
     Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 600;
 }
 
 .section {
-  padding-top: 4rem;  /* 64px */
-  padding-bottom: 4rem; /* 64px */
-}
-.sand-bg {
-  background: #E9E0D1;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-.card-title {
-  color: #3A3F3D;
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-viridian-500);
+  outline-offset: 2px;
 }

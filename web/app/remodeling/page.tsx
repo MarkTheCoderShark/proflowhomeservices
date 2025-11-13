@@ -24,18 +24,21 @@ export default function Remodeling() {
   const data = remodelContent.remodeling;
   const extraSections = (
     <>
-      <section className="section">
-        <div className="container grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {sections.map((s) => (
-            <Link
-              key={s.slug}
-              href={`/remodeling/${s.slug}`}
-              className="rounded-lg border border-zinc-200 bg-white p-5 hover:shadow-sm transition"
-            >
-              <div className="heading text-lg text-evergreen font-semibold">{s.name}</div>
-              <p className="mt-2 text-sm text-slate">Explore →</p>
-            </Link>
-          ))}
+      <section className="section bg-white">
+        <div className="container">
+          <h2 className="heading text-2xl sm:text-3xl font-semibold text-viridian-900 mb-6">Explore Our Remodeling Services</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {sections.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/remodeling/${s.slug}`}
+                className="group rounded-lg border-2 border-mint_green-300 bg-mint_green-50 p-6 transition hover:border-viridian-500 hover:shadow-lg"
+              >
+                <div className="heading text-lg font-semibold text-slate-900 group-hover:text-viridian-700">{s.name}</div>
+                <p className="mt-2 text-sm text-slate-600">Explore →</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
       <ProcessTimeline />

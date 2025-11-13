@@ -17,7 +17,7 @@ export default function CityLinkList({
     <>
       {list.map((city, index) => (
         <span key={city}>
-          <Link className="text-aqua" href={`/service-areas/${city}`}>
+          <Link className="text-viridian-400 hover:text-viridian-500 transition" href={`/service-areas/${city}`}>
             {formatCity(city)}
           </Link>
           {index < list.length - 1 ? ", " : ""}

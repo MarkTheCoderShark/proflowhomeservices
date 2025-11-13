@@ -6,7 +6,7 @@ import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Interior Painting in Sacramento & Nearby Cities",
-  description: "Clean, professional interior painting with premium prep, products, and finishes.",
+  description: "Premium interior painting in Sacramento, Roseville & Rocklin. Flawless prep, professional finishes, zero mess. Get your free quote today!",
   path: "/services/interior-painting",
 });
 

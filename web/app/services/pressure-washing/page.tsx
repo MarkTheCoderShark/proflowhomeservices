@@ -6,7 +6,7 @@ import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Pressure Washing in Sacramento & Nearby Cities",
-  description: "House, driveway, and exterior washing to refresh curb appeal.",
+  description: "Professional pressure washing in Sacramento, Roseville & Rocklin. Restore your home's curb appeal instantly. Get your free estimate now!",
   path: "/services/pressure-washing",
 });
 

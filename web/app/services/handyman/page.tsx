@@ -6,7 +6,7 @@ import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Handyman Services in Sacramento & Nearby Cities",
-  description: "Dependable home repairs and punch list fixes by a professional, local team.",
+  description: "Trusted handyman services in Sacramento, Roseville & Rocklin. Home repairs, punch lists, and fixes done right. Schedule service today!",
   path: "/services/handyman",
 });
 

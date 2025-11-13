@@ -19,7 +19,7 @@ export default function Contact() {
             ]}
           />
         <div className="md:col-span-2">
-          <h1 className="heading text-3xl font-semibold text-evergreen">Get a Free Estimate</h1>
+          <h1 className="heading text-3xl font-semibold text-viridian-500">Get a Free Estimate</h1>
           <p className="mt-2 text-slate">We’ll confirm details and schedule your service.</p>
           <div className="mt-6 rounded-lg border border-zinc-200 bg-white p-5">
             <ContactForm />
@@ -27,15 +27,15 @@ export default function Contact() {
         </div>
         <aside className="space-y-4">
           <div>
-            <div className="heading text-lg font-semibold text-evergreen">Call Us</div>
+            <div className="heading text-lg font-semibold text-viridian-500">Call Us</div>
             <p className="mt-1 text-slate">(###) ###-####</p>
           </div>
           <div>
-            <div className="heading text-lg font-semibold text-evergreen">Hours</div>
+            <div className="heading text-lg font-semibold text-viridian-500">Hours</div>
             <p className="mt-1 text-slate">Mon–Sat, 8am–6pm</p>
           </div>
           <div>
-            <div className="heading text-lg font-semibold text-evergreen">Service Areas</div>
+            <div className="heading text-lg font-semibold text-viridian-500">Service Areas</div>
             <p className="mt-1 text-slate">Sacramento, Roseville, Rocklin, Folsom & more</p>
           </div>
         </aside>

@@ -29,3 +29,14 @@ export const cities = [
   "lincoln",
   "sacramento",
 ];
+
+export function getCityRoutes() {
+  return cities.map((slug) => ({
+    name: slug
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" "),
+    path: `/service-areas/${slug}`,
+    slug,
+  }));
+}

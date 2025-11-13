@@ -6,7 +6,7 @@ import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Roof & Solar Panel Cleaning in Sacramento & Nearby Cities",
-  description: "Protect your roof and improve solar output with safe cleaning.",
+  description: "Safe roof & solar panel cleaning in Sacramento, Roseville & Rocklin. Boost solar efficiency and extend roof life. Schedule service now!",
   path: "/services/roof-solar-cleaning",
 });
 

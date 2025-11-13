@@ -12,18 +12,18 @@ const services = [
 
 export default function CityServices() {
   return (
-    <section className="section">
+    <section className="section bg-mint_green-50">
       <div className="container">
-        <h2 className="heading text-2xl sm:text-3xl font-semibold text-evergreen">Services Offered</h2>
+        <h2 className="heading text-2xl sm:text-3xl font-semibold text-viridian-900">Services Offered</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <Link
               key={s.href}
               href={s.href}
-              className="rounded-lg border border-zinc-200 bg-white p-5 hover:shadow-sm transition"
+              className="group rounded-lg border-2 border-mint_green-300 bg-mint_green-50 p-5 transition hover:border-viridian-500 hover:shadow-lg"
             >
-              <div className="heading text-lg text-evergreen font-semibold">{s.title}</div>
-              <p className="mt-2 text-sm text-slate">Learn more →</p>
+              <div className="heading text-lg font-semibold text-slate-900 group-hover:text-viridian-700">{s.title}</div>
+              <p className="mt-2 text-sm text-slate-600">Learn more →</p>
             </Link>
           ))}
         </div>

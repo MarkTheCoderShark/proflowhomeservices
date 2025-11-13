@@ -112,21 +112,25 @@ Position relative to competitors:
 ## 3.1 Color Palette
 
 ### **Primary Colors**
-#### 1. ProFlow Evergreen  
-HEX: **#1F3B2C**  
-Usage: Headers, buttons, brand identity, key accents
+#### 1. ProFlow Evergreen
+HEX: **#1F3B2C**
+Usage: Headers, brand identity, CTA sections, key accents
 
-#### 2. ProFlow Midnight  
-HEX: **#0E1A14**  
-Usage: Hero overlays, footer, dark sections
+#### 2. ProFlow Midnight
+HEX: **#0E1A14**
+Usage: Footer only (provides grounding and authority)
 
-#### 3. ProFlow White  
-HEX: **#FFFFFF**  
-Usage: Body background, text contrast
+#### 3. ProFlow White
+HEX: **#FFFFFF**
+Usage: Primary body background, content sections, cards, default background
 
-#### 4. ProFlow Mist  
-HEX: **#F4F7F5**  
-Usage: Light section backgrounds, subtle blocks
+#### 4. ProFlow Mist
+HEX: **#F4F7F5**
+Usage: Alternating section backgrounds for visual rhythm
+
+#### 5. ProFlow Light Mist
+HEX: **#F9FAF9**
+Usage: Subtle card backgrounds when differentiation from white is needed
 
 ---
 
@@ -150,11 +154,17 @@ Usage: Remodeling warmth accents
 ---
 
 ## 3.2 Color Usage Percentages
-- Evergreen: **40%**  
-- Midnight: **20%**  
-- Mist/White: **25%**  
-- Aqua: **10%**  
-- Gold/Clay: **5% combined**
+- White/Light backgrounds (White, Mist, Light Mist): **70%**
+- Evergreen (CTA sections, headers): **15%**
+- Midnight (Footer only): **5%**
+- Aqua (Buttons, links): **8%**
+- Gold/Clay (Accents): **2% combined**
+
+**Background Strategy:**
+- Primary content sections: White (#FFFFFF)
+- Alternating sections for visual rhythm: Mist (#F4F7F5)
+- Subtle card differentiation: Light Mist (#F9FAF9)
+- **Avoid**: Warm beige or cream tones - they appear muddy and unprofessional
 
 ---
 

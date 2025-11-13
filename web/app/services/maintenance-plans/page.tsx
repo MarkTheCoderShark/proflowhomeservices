@@ -6,7 +6,7 @@ import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Home Maintenance Plans in Sacramento & Nearby Cities",
-  description: "Preventative care packages to keep your home in top shape.",
+  description: "Home maintenance plans in Sacramento, Roseville & Rocklin. Preventative care keeps your home worry-free year-round. Get started today!",
   path: "/services/maintenance-plans",
 });
 

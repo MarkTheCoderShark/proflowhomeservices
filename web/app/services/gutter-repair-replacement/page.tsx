@@ -6,7 +6,7 @@ import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Gutter Repair & Replacement in Sacramento & Nearby Cities",
-  description: "Repair leaks, fix sagging runs, or replace failing gutters with pro-grade materials and installation.",
+  description: "Gutter repair & replacement in Sacramento, Roseville & Rocklin. Fix leaks, sagging runs with pro-grade materials. Call for free estimate!",
   path: "/services/gutter-repair-replacement",
 });
 

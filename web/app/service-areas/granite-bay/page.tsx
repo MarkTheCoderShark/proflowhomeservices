@@ -1,4 +1,5 @@
 import CTASection from "@/components/sections/CTASection";
+import FAQAccordion from "@/components/sections/FAQAccordion";
 import CityServices from "@/components/sections/CityServices";
 import Neighborhoods from "@/components/sections/Neighborhoods";
 import CityIntroSection from "@/components/sections/CityIntroSection";
@@ -25,10 +26,18 @@ export default function Page() {
           { name: city.name, url: `/service-areas/${slug}` },
         ]}
       />
-      <section className="section bg-mist">
-        <div className="container">
-          <h1 className="heading text-3xl font-semibold text-evergreen">{city.heroTitle}</h1>
-          <p className="mt-2 text-slate max-w-2xl">{city.heroSubtitle}</p>
+      <section
+        className="relative section overflow-hidden !py-20"
+        style={{
+          backgroundImage: 'url(/hero-city-granite-bay.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-viridian-900/60 to-viridian-900/70" />
+        <div className="container relative z-10">
+          <h1 className="heading text-3xl sm:text-4xl font-bold text-white drop-shadow-lg">{city.heroTitle}</h1>
+          <p className="mt-3 text-lg text-white drop-shadow-md max-w-2xl">{city.heroSubtitle}</p>
         </div>
       </section>
       <CityIntroSection
@@ -39,6 +48,7 @@ export default function Page() {
       />
       <CityServices />
       <Neighborhoods city={city.name} items={city.neighborhoods} />
+      <FAQAccordion />
       <CTASection />
     </div>
   );

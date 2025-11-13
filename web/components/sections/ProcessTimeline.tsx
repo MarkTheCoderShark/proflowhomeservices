@@ -10,15 +10,15 @@ const defaultSteps: Step[] = [
 
 export default function ProcessTimeline({ steps = defaultSteps }: { steps?: Step[] }) {
   return (
-    <section className="section">
+    <section className="section bg-mint_green-50">
       <div className="container">
-        <h2 className="heading text-2xl sm:text-3xl font-semibold text-evergreen">Our Process</h2>
+        <h2 className="heading text-2xl sm:text-3xl font-semibold text-viridian-900">Our Process</h2>
         <ol className="mt-6 grid gap-6 md:grid-cols-5">
           {steps.map((s, idx) => (
-            <li key={s.title} className="rounded-lg border border-zinc-200 bg-white p-4">
-              <div className="heading text-aqua font-semibold">Step {idx + 1}</div>
-              <div className="heading text-evergreen font-semibold">{s.title}</div>
-              {s.desc ? <p className="mt-1 text-slate text-sm">{s.desc}</p> : null}
+            <li key={s.title} className="rounded-lg bg-white border-2 border-mint_green-200 p-5 shadow-sm">
+              <div className="heading text-viridian-700 font-semibold text-sm">Step {idx + 1}</div>
+              <div className="heading text-slate-900 font-semibold mt-1">{s.title}</div>
+              {s.desc ? <p className="mt-2 text-slate-600 text-sm">{s.desc}</p> : null}
             </li>
           ))}
         </ol>

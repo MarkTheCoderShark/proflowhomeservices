@@ -6,7 +6,7 @@ import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Gutter Guards in Sacramento & Nearby Cities",
-  description: "Reduce clogs and maintenance with professionally installed gutter guards. Local, licensed, and trusted.",
+  description: "Expert gutter guard installation in Sacramento, Roseville & Rocklin. Eliminate clogs and reduce maintenance. Schedule your free quote now!",
   path: "/services/gutter-guards",
 });
 
