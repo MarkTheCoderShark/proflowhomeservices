@@ -20,10 +20,10 @@ export default function ServiceAreasGrid({
   limit,
 }: ServiceAreasGridProps) {
   // If no areas provided, use city routes
-  const cityRoutes = areas || getCityRoutes().map((city) => ({
+  const cityRoutes: ServiceArea[] = areas || getCityRoutes().map((city) => ({
     title: city.name,
     href: city.path,
-    image: city.image || "/placeholder-city.jpeg",
+    image: undefined,
   }));
 
   const displayedAreas = limit ? cityRoutes.slice(0, limit) : cityRoutes;

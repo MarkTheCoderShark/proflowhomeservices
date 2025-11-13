@@ -57,8 +57,6 @@ export default function ServicePageTemplate({
           <div className="container">
             <h2 className="heading text-2xl font-semibold text-viridian-900 mb-6">Before & After</h2>
             <BeforeAfter
-              beforeImage={data.beforeAfter.before}
-              afterImage={data.beforeAfter.after}
               beforeLabel={data.beforeAfter.beforeLabel}
               afterLabel={data.beforeAfter.afterLabel}
             />
