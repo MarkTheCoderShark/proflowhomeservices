@@ -6,12 +6,20 @@ type HeroProps = {
   subtitle?: ReactNode;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  backgroundImage?: string;
 };
 
-export default function Hero({ title, subtitle, primaryCta, secondaryCta }: HeroProps) {
+export default function Hero({ title, subtitle, primaryCta, secondaryCta, backgroundImage }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-midnight text-white">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60" />
+    <section
+      className="relative overflow-hidden bg-midnight text-white"
+      style={backgroundImage ? {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      } : undefined}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70" />
       <div className="container relative section">
         <div className="max-w-3xl">
           <h1 className="heading text-4xl sm:text-5xl font-bold leading-tight">
@@ -38,4 +46,3 @@ export default function Hero({ title, subtitle, primaryCta, secondaryCta }: Hero
     </section>
   );
 }
-

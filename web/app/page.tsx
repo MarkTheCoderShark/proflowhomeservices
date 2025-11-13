@@ -23,6 +23,7 @@ export default function Home() {
         }
         primaryCta={{ label: "Get Free Estimate", href: "/contact" }}
         secondaryCta={{ label: "Call (###) ###-####", href: "tel:" }}
+        backgroundImage="/hero-home.jpeg"
       />
       <ServiceGrid />
       <FeatureGrid />

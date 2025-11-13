@@ -1,9 +1,24 @@
 import Link from "next/link";
 
 const items = [
-  { href: "/remodeling/bathroom", title: "Bathroom Remodeling" },
-  { href: "/remodeling/kitchen", title: "Kitchen Remodeling" },
-  { href: "/remodeling/garage-conversions", title: "Garage Conversions" },
+  {
+    href: "/remodeling/bathroom",
+    title: "Bathroom Remodeling",
+    desc: "Smart layouts, durable finishes, and tidy build execution.",
+    image: "/dreamina-2025-11-12-8102-A luxurious, freshly remodeled bathroom ....jpeg",
+  },
+  {
+    href: "/remodeling/kitchen",
+    title: "Kitchen Remodeling",
+    desc: "Innovative storage, lighting, and premium surfaces.",
+    image: "/remodel-kitchen.jpeg",
+  },
+  {
+    href: "/remodeling/flooring",
+    title: "Flooring",
+    desc: "LVP, hardwood, tile, and stone installations.",
+    image: "/lvp-flooring.jpeg",
+  },
 ];
 
 export default function RemodelingSpotlight() {
@@ -28,9 +43,22 @@ export default function RemodelingSpotlight() {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-3">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="aspect-square rounded-lg bg-mist" />
+          <div className="grid grid-cols-1 gap-4">
+            {items.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group relative block overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm"
+              >
+                <div
+                  className="h-48 w-full bg-cover bg-center transition group-hover:scale-105"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                />
+                <div className="p-4">
+                  <div className="heading text-lg font-semibold text-evergreen">{item.title}</div>
+                  <p className="mt-1 text-sm text-slate">{item.desc}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -38,4 +66,3 @@ export default function RemodelingSpotlight() {
     </section>
   );
 }
-
