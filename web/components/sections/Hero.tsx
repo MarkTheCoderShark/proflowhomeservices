@@ -12,36 +12,38 @@ type HeroProps = {
 export default function Hero({ title, subtitle, primaryCta, secondaryCta, backgroundImage }: HeroProps) {
   return (
     <section
-      className="relative overflow-hidden bg-mint_cream text-viridian-500"
+      className="relative overflow-hidden bg-viridian-900 text-white min-h-[600px] md:min-h-[700px] flex items-center"
       style={backgroundImage ? {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       } : undefined}
     >
-      {/* Gradient overlay for maximum text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-black/10" />
-      <div className="container relative section">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className={`heading text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight ${backgroundImage ? 'text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]' : 'text-viridian-900'}`}>
+      {/* Darker gradient overlay for premium, immersive feel */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/40" />
+      <div className="container relative py-24 md:py-32">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white">
             {title}
           </h1>
           {subtitle ? (
-            <p className={`mt-4 text-lg md:text-xl leading-relaxed ${backgroundImage ? 'text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]' : 'text-slate-700'}`}>{subtitle}</p>
+            <p className="mt-6 text-lg md:text-xl lg:text-2xl leading-relaxed text-white/95 max-w-3xl mx-auto">
+              {subtitle}
+            </p>
           ) : null}
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
             {primaryCta ? (
-              <Button asChild href={primaryCta.href} darkBg={!!backgroundImage}>
+              <Button asChild href={primaryCta.href} darkBg className="text-base md:text-lg">
                 {primaryCta.label}
               </Button>
             ) : null}
             {secondaryCta ? (
-              <Button variant="secondary" asChild href={secondaryCta.href} darkBg={!!backgroundImage}>
+              <Button variant="secondary" asChild href={secondaryCta.href} darkBg className="text-base md:text-lg">
                 {secondaryCta.label}
               </Button>
             ) : null}
           </div>
-          <p className={`mt-3 text-xs ${backgroundImage ? 'text-white/90' : 'text-slate-600'}`}>Powered by ProFlow360™</p>
+          <p className="mt-6 text-sm text-white/80 tracking-wide">Operations powered by ProFlow360™</p>
         </div>
       </div>
     </section>

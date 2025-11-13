@@ -18,7 +18,14 @@ export default function FAQAccordion() {
   return (
     <section className="section bg-mint_green-50">
       <div className="container">
-        <h2 className="heading text-2xl sm:text-3xl font-semibold text-viridian-900 text-center mb-8">Frequently Asked Questions</h2>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="heading text-3xl sm:text-4xl font-bold text-viridian-900">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-4 text-lg text-slate-700">
+            Have questions about our services, scheduling, or pricing? Find answers to common questions below.
+          </p>
+        </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-2 mb-6">

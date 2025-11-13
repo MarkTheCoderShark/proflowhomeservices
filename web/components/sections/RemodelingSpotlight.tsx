@@ -4,20 +4,26 @@ const items = [
   {
     href: "/remodeling/bathroom",
     title: "Bathroom Remodeling",
-    desc: "Smart layouts, durable finishes, and tidy build execution.",
+    desc: "Transform your bathroom with smart layouts, custom tile work, and durable finishes that stand the test of time.",
     image: "/bathroom.jpeg",
   },
   {
     href: "/remodeling/kitchen",
     title: "Kitchen Remodeling",
-    desc: "Innovative storage, lighting, and premium surfaces.",
+    desc: "Stunning kitchens with innovative storage, premium countertops, modern lighting, and expert craftsmanship.",
     image: "/remodel-kitchen.jpeg",
   },
   {
     href: "/remodeling/flooring",
-    title: "Flooring",
-    desc: "LVP, hardwood, tile, and stone installations.",
+    title: "Flooring Installation",
+    desc: "Beautiful, lasting floors with luxury vinyl plank, hardwood, tile, and natural stone expertly installed.",
     image: "/lvp-flooring.jpeg",
+  },
+  {
+    href: "/remodeling/adu",
+    title: "ADU & Garage Conversions",
+    desc: "Expand your living space with permitted ADUs, in-law suites, and functional garage conversions.",
+    image: "/remodel-kitchen.jpeg",
   },
 ];
 
@@ -26,10 +32,12 @@ export default function RemodelingSpotlight() {
     <section className="section bg-viridian-900">
       <div className="container">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="heading text-3xl sm:text-4xl font-bold text-white">Remodeling Spotlight</h2>
-          <p className="mt-4 text-lg text-mint_cream-100">
-            High-ticket services done right: licensed contractor, clean job sites, and transparent proposals.
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Premium Remodeling Services
+          </h2>
+          <p className="mt-6 text-lg md:text-xl text-mint_cream-100 leading-relaxed">
+            From concept to completion, we deliver high-quality remodels with licensed contractors, transparent pricing, and clean, professional job sites.
           </p>
         </div>
 
@@ -72,13 +80,13 @@ export default function RemodelingSpotlight() {
         </div>
 
         {/* View More Button */}
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-lg px-8 py-4 text-white font-semibold hover:bg-white/20 hover:border-white/50 transition-all shadow-lg"
+            href="/remodeling"
+            className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-lg px-10 py-4 text-lg text-white font-semibold hover:bg-white/20 hover:border-white/50 transition-all shadow-lg"
           >
-            View All Projects
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            Explore All Remodeling Services
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
