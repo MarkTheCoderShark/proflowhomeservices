@@ -31,7 +31,7 @@ export default function ProFlowStory() {
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <div
                 className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: "url(/team-jobsite.jpeg)" }}
+                style={{ backgroundImage: "url(/tech1.jpeg)" }}
               />
             </div>
           </div>

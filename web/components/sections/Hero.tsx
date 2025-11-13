@@ -12,7 +12,7 @@ type HeroProps = {
 export default function Hero({ title, subtitle, primaryCta, secondaryCta, backgroundImage }: HeroProps) {
   return (
     <section
-      className="relative overflow-hidden bg-viridian-900 text-white min-h-[600px] md:min-h-[700px] flex items-center -mt-20"
+      className="relative overflow-hidden bg-viridian-900 text-white min-h-[600px] md:min-h-[700px] flex items-center"
       style={backgroundImage ? {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -21,7 +21,7 @@ export default function Hero({ title, subtitle, primaryCta, secondaryCta, backgr
     >
       {/* Darker gradient overlay for premium, immersive feel */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/40" />
-      <div className="container relative py-24 md:py-32 pt-32 md:pt-40">
+      <div className="container relative py-24 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white">
             {title}

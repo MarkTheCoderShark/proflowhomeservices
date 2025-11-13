@@ -20,7 +20,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-40">
       {/* Secondary Top Bar - Trust Indicators */}
       <div className="bg-topbar border-b border-slate-300">
         <div className="container">
@@ -40,94 +40,73 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Main Navigation Bar with Cut-out Logo Design */}
-      <div className="relative">
-        {/* Logo - Overlaps hero, positioned absolutely */}
-        <div className="absolute left-4 md:left-8 top-2 z-10">
-          <Link href="/" className="block">
-            <img
-              src="/logo2.png"
-              alt="ProFlow Home Services"
-              className="h-24 md:h-28 drop-shadow-2xl hover:scale-105 transition-transform"
-            />
+      {/* Main Navigation Bar */}
+      <div className="bg-viridian-800 border-b border-viridian-700">
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="/" className="flex items-center -my-4">
+          <img src="/logo2.png" alt="ProFlow Home Services" className="h-32" />
+        </Link>
+        <nav className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => {
+            const active = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-white hover:text-mint_cream-500 transition-colors ${
+                  active ? "text-mint_cream-500 font-medium underline" : ""
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
+        <div className="hidden md:block">
+          <Link
+            href="/contact"
+            className="rounded-md border border-white text-white px-4 py-2 heading text-sm font-medium hover:bg-white hover:text-green-700 transition"
+            onClick={() => track("cta_click", { location: "navbar", label: "get_estimate" })}
+          >
+            Get Estimate
           </Link>
         </div>
-
-        {/* Green Navigation Bar - Starts after logo */}
-        <div className="bg-viridian-800 border-b border-viridian-700 ml-28 md:ml-36">
-          <div className="container flex h-20 items-center justify-between pl-4 md:pl-8">
-            {/* Spacer for logo on mobile */}
-            <div className="md:hidden w-8"></div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-6 ml-4">
-              {navItems.map((item) => {
-                const active = pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`text-white hover:text-mint_cream-300 transition-colors font-medium ${
-                      active ? "text-mint_cream-300 underline" : ""
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* CTA Button - Desktop */}
-            <div className="hidden md:block">
+        <button
+          aria-label="Open menu"
+          className="md:hidden rounded-md p-2 text-white"
+          onClick={() => setOpen((v) => !v)}
+        >
+          <Menu size={20} />
+        </button>
+      </div>
+      {open && (
+        <div className="md:hidden border-t border-viridian-700 bg-viridian-800">
+          <div className="container py-3 flex flex-col gap-3">
+            {navItems.map((item) => (
               <Link
-                href="/contact"
-                className="rounded-md bg-cta text-white px-5 py-2.5 heading text-sm font-semibold hover:bg-cta-hover transition shadow-lg"
-                onClick={() => track("cta_click", { location: "navbar", label: "get_estimate" })}
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={`text-white hover:text-mint_cream-500 ${
+                  pathname === item.href ? "text-mint_cream-500 font-medium underline" : ""
+                }`}
               >
-                Get Free Estimate
+                {item.label}
               </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              aria-label="Open menu"
-              className="md:hidden rounded-md p-2 text-white hover:bg-viridian-700 transition"
-              onClick={() => setOpen((v) => !v)}
+            ))}
+            <Link
+              href="/contact"
+              onClick={() => {
+                track("cta_click", { location: "mobile_nav", label: "get_estimate" });
+                setOpen(false);
+              }}
+              className="rounded-md border border-white text-white px-4 py-2 heading text-sm font-medium hover:bg-white hover:text-green-700 transition inline-flex w-max"
             >
-              <Menu size={24} />
-            </button>
+              Get Estimate
+            </Link>
           </div>
-
-          {/* Mobile Menu Dropdown */}
-          {open && (
-            <div className="md:hidden border-t border-viridian-700 bg-viridian-800">
-              <div className="container py-4 flex flex-col gap-3">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className={`text-white hover:text-mint_cream-300 font-medium transition-colors ${
-                      pathname === item.href ? "text-mint_cream-300 underline" : ""
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                <Link
-                  href="/contact"
-                  onClick={() => {
-                    track("cta_click", { location: "mobile_nav", label: "get_estimate" });
-                    setOpen(false);
-                  }}
-                  className="rounded-md bg-cta text-white px-5 py-2.5 heading text-sm font-semibold hover:bg-cta-hover transition shadow-lg inline-flex w-max mt-2"
-                >
-                  Get Free Estimate
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
+      )}
       </div>
     </header>
   );
