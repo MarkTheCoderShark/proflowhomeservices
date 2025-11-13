@@ -70,6 +70,19 @@ export default function RemodelingSpotlight() {
             );
           })}
         </div>
+
+        {/* View More Button */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-lg px-8 py-4 text-white font-semibold hover:bg-white/20 hover:border-white/50 transition-all shadow-lg"
+          >
+            View All Projects
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );
