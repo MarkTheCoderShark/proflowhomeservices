@@ -153,8 +153,12 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
       { title: "Coordination", desc: "Sync with cabinetry, tile, and trim trades." },
     ],
     gallery: [
-      { src: "/remodel-flooring.jpeg", alt: "Finished flooring" },
-      { src: "/home-cta-background.jpeg", alt: "Home floor" },
+      { src: "/lvp-flooring.jpeg", alt: "Luxurious vinyl plank flooring" },
+      { src: "/lvp-flooring-dark.jpeg", alt: "Dark luxury vinyl plank" },
+      { src: "/lvp-flooring2.jpeg", alt: "Close-up of flooring" },
+      { src: "/lvp-flooring3.jpeg", alt: "Flooring transition" },
+      { src: "/lvp-flooring4.jpeg", alt: "Natural tone vinyl plank" },
+      { src: "/remodel-flooring.jpeg", alt: "Flooring install" },
     ],
   },
   "drywall-framing": {
@@ -208,7 +212,9 @@ export const remodelContent: Record<RemodelSlug, RemodelContent> = {
     ],
     gallery: [
       { src: "/remodel-adu.jpeg", alt: "ADU exterior" },
-      { src: "/remodel-kitchen.jpeg", alt: "ADU interior" },
+      { src: "/adu-interior.jpeg", alt: "ADU interior" },
+      { src: "/adu-interior2.jpeg", alt: "ADU interior detail" },
+      { src: "/adu-interior3.jpeg", alt: "ADU living" },
     ],
   },
 };
