@@ -1,6 +1,8 @@
-import CTASection from "@/components/sections/CTASection";
+import CityLinkList from "@/components/ui/CityLinkList";
+import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
 import { seoMetadata } from "@/lib/seo";
 import { BreadcrumbsJsonLd, ServiceJsonLd } from "@/components/seo/JsonLd";
+import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Home Maintenance Plans in Sacramento & Nearby Cities",
@@ -9,6 +11,7 @@ export const metadata = seoMetadata({
 });
 
 export default function Page() {
+  const data = serviceContent["maintenance-plans"];
   return (
     <div>
       <BreadcrumbsJsonLd
@@ -23,27 +26,14 @@ export default function Page() {
         description="Seasonal service bundles for gutters, washing, inspections, and more."
         areaServed={["Sacramento", "Roseville", "Rocklin", "Folsom", "Lincoln"]}
       />
-      <section className="section bg-mist">
-        <div className="container">
-          <h1 className="heading text-3xl font-semibold text-evergreen">Maintenance Plans</h1>
-          <p className="mt-2 text-slate max-w-2xl">
-            Seasonal service bundles for gutters, exterior washing, inspections, and more.
-          </p>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container grid gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="heading text-2xl font-semibold text-evergreen">Plan Options</h2>
-            <p className="mt-3 text-slate">Choose the visits and services that fit your home and budget.</p>
-          </div>
-          <div>
-            <h2 className="heading text-2xl font-semibold text-evergreen">Scheduling</h2>
-            <p className="mt-3 text-slate">Managed with reminders and updates through ProFlow360.</p>
-          </div>
-        </div>
-      </section>
-      <CTASection />
+      <ServicePageTemplate
+        data={data}
+        notes={
+          <>
+            Serving <CityLinkList /> and nearby communities with recurring care.
+          </>
+        }
+      />
     </div>
   );
 }

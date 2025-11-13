@@ -1,6 +1,8 @@
-import CTASection from "@/components/sections/CTASection";
+import CityLinkList from "@/components/ui/CityLinkList";
+import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
 import { seoMetadata } from "@/lib/seo";
 import { BreadcrumbsJsonLd, ServiceJsonLd } from "@/components/seo/JsonLd";
+import { serviceContent } from "@/data/services";
 
 export const metadata = seoMetadata({
   title: "Pressure Washing in Sacramento & Nearby Cities",
@@ -9,6 +11,7 @@ export const metadata = seoMetadata({
 });
 
 export default function Page() {
+  const data = serviceContent["pressure-washing"];
   return (
     <div>
       <BreadcrumbsJsonLd
@@ -23,31 +26,14 @@ export default function Page() {
         description="Safe, effective exterior cleaning for siding, concrete, and more."
         areaServed={["Sacramento", "Roseville", "Rocklin", "Lincoln"]}
       />
-      <section className="section bg-mist">
-        <div className="container">
-          <h1 className="heading text-3xl font-semibold text-evergreen">Pressure Washing</h1>
-          <p className="mt-2 text-slate max-w-2xl">
-            Safe, effective cleaning for siding, concrete, and more.
-          </p>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container grid gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="heading text-2xl font-semibold text-evergreen">Surfaces</h2>
-            <ul className="mt-3 list-disc pl-5 text-slate space-y-2">
-              <li>Home exteriors</li>
-              <li>Driveways and walkways</li>
-              <li>Decks and fences</li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="heading text-2xl font-semibold text-evergreen">Approach</h2>
-            <p className="mt-3 text-slate">Proper pressure settings and detergents tailored to each surface.</p>
-          </div>
-        </div>
-      </section>
-      <CTASection />
+      <ServicePageTemplate
+        data={data}
+        notes={
+          <>
+            Serving <CityLinkList /> and surrounding areas.
+          </>
+        }
+      />
     </div>
   );
 }
