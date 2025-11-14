@@ -24,11 +24,36 @@ export default function ContactForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      city: formData.get("city"),
+      services: formData.get("services"),
+      details: formData.get("details"),
+    };
+
     try {
-      // TODO: integrate with ProFlow360/Strapi API
-      await new Promise((r) => setTimeout(r, 600));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
       setStatus("success");
-    } catch (e) {
+      e.currentTarget.reset();
+      setSelectedServices([]);
+      setShowDetails(false);
+    } catch (error) {
+      console.error("Form submission error:", error);
       setStatus("error");
     }
   }
