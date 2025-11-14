@@ -1,6 +1,18 @@
 import Button from "@/components/ui/Button";
 
-export default function CTASection() {
+export default function CTASection({ city }: { city?: string } = {}) {
+  const heading = city
+    ? `Need Home Services in ${city}?`
+    : "Ready to Transform Your Home?";
+
+  const body = city
+    ? "Get fast, professional help for gutters, painting, remodeling, and repairs — all from a local team you can trust."
+    : "Get a free, no-obligation estimate today. Our team responds quickly and provides transparent pricing on every project—big or small.";
+
+  const footerText = city
+    ? `Available across all neighborhoods of ${city}.`
+    : "Available across Sacramento, Roseville, Rocklin, and surrounding areas";
+
   return (
     <section className="relative py-20 md:py-28 bg-viridian-900 overflow-hidden">
       {/* Background Image */}
@@ -15,10 +27,10 @@ export default function CTASection() {
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-6">
           <h2 className="heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Ready to Transform Your Home?
+            {heading}
           </h2>
           <p className="text-lg md:text-xl text-mint_cream-100 leading-relaxed max-w-2xl">
-            Get a free, no-obligation estimate today. Our team responds quickly and provides transparent pricing on every project—big or small.
+            {body}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
             <Button
@@ -42,7 +54,7 @@ export default function CTASection() {
             </Button>
           </div>
           <p className="mt-4 text-sm text-mint_cream-200">
-            Available across Sacramento, Roseville, Rocklin, and surrounding areas
+            {footerText}
           </p>
         </div>
       </div>

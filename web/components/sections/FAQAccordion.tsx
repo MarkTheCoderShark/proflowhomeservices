@@ -2,7 +2,26 @@
 import { useState } from "react";
 import { faqCategories } from "./faqData";
 
-export default function FAQAccordion() {
+type LocalFAQ = { q: string; a: string };
+
+export default function FAQAccordion({
+  cityName,
+  localFaqs,
+}: {
+  cityName?: string;
+  localFaqs?: LocalFAQ[];
+} = {}) {
+  const categories =
+    cityName && localFaqs && localFaqs.length
+      ? [
+          {
+            label: `${cityName} Homeowners`,
+            questions: localFaqs,
+          },
+          ...faqCategories,
+        ]
+      : faqCategories;
+
   const [activeTab, setActiveTab] = useState(0);
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
@@ -29,7 +48,7 @@ export default function FAQAccordion() {
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-2 mb-6">
-          {faqCategories.map((category, index) => (
+          {categories.map((category, index) => (
             <button
               key={category.label}
               onClick={() => handleTabChange(index)}
@@ -46,7 +65,7 @@ export default function FAQAccordion() {
 
         {/* FAQ Content */}
         <div className="divide-y divide-mint_green-200 rounded-lg border-2 border-mint_green-200 bg-white">
-          {faqCategories[activeTab].questions.map((item, index) => {
+          {categories[activeTab].questions.map((item, index) => {
             const isOpen = openQuestion === index;
             return (
               <div key={item.q}>
