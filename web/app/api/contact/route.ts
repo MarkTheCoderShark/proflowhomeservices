@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, phone, email, city, services, details } = body;
+    const { name, phone, email, city, services, details, financing } = body;
 
     // Validate required fields
     if (!name || !phone || !services) {
@@ -26,6 +26,7 @@ Email: ${email || 'Not provided'}
 City: ${city || 'Not provided'}
 Services Requested: ${services}
 Project Details: ${details || 'Not provided'}
+Financing Interest: ${financing === 'Interested in financing' ? 'Yes' : financing || 'No'}
 
 ---
 Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })}

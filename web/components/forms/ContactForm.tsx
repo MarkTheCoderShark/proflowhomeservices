@@ -25,7 +25,8 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget; // Save reference before async operation
+    const formData = new FormData(form);
     const data = {
       name: formData.get("name"),
       phone: formData.get("phone"),
@@ -33,6 +34,7 @@ export default function ContactForm() {
       city: formData.get("city"),
       services: formData.get("services"),
       details: formData.get("details"),
+      financing: formData.get("financing") ?? "No",
     };
 
     try {
@@ -49,7 +51,7 @@ export default function ContactForm() {
       }
 
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset(); // Use saved reference
       setSelectedServices([]);
       setShowDetails(false);
     } catch (error) {
@@ -142,11 +144,25 @@ export default function ContactForm() {
           {showDetails ? "− Hide" : "+ Add"} Project Details (Optional)
         </button>
         {showDetails && (
-          <textarea
-            name="details"
-            className="w-full rounded-md border border-zinc-300 min-h-[100px] p-3 focus:outline-none focus:ring-2 focus:ring-viridian-500/60 focus:border-viridian-500"
-            placeholder="Tell us more about your project..."
-          />
+          <div className="space-y-4">
+            <textarea
+              name="details"
+              className="w-full rounded-md border border-zinc-300 min-h-[100px] p-3 focus:outline-none focus:ring-2 focus:ring-viridian-500/60 focus:border-viridian-500"
+              placeholder="Tell us more about your project..."
+            />
+            <label className="flex items-start gap-3 text-sm text-slate-700">
+              <input
+                type="checkbox"
+                name="financing"
+                value="Interested in financing"
+                className="mt-1 h-4 w-4 rounded border-zinc-300 text-viridian-600 focus:ring-viridian-500"
+              />
+              <span>
+                I’d like to discuss financing or monthly payment options.
+                <span className="block text-xs text-slate-500">Let us know so we can pair you with the best program when we follow up.</span>
+              </span>
+            </label>
+          </div>
         )}
       </div>
 
@@ -172,4 +188,3 @@ export default function ContactForm() {
     </form>
   );
 }
-
