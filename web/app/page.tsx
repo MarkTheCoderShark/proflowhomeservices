@@ -31,7 +31,7 @@ export default function Home() {
         subtitle="Serving Sacramento, Roseville, Rocklin, and surrounding areas with expert gutter care, painting, handyman services, pressure washing, and complete home remodeling."
         primaryCta={{ label: "Get Free Estimate", href: "/contact" }}
         secondaryCta={{ label: "Call (916) 740-7249", href: "tel:+19167407249" }}
-        backgroundImage="/hero-home.jpeg"
+        backgroundVideo="/herovideo.mp4"
       />
       <ServiceGrid />
       <FeatureGrid />
