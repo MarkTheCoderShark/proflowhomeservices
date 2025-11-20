@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="mt-10 border-t border-viridian-800 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm text-mint_cream-300">
           <p>© {new Date().getFullYear()} ProFlow Home Services™. All rights reserved.</p>
           <p>
-            <span>Brand & UI/UX by ProFlow.</span>
+            <span>Brand & UI/UX by ProFlow. Website by <a href="https://verlua.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Verlua.com</a></span>
           </p>
         </div>
       </div>

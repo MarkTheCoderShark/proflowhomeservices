@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   },
   description:
     "Professional home services, repairs, and remodeling across the Sacramento area. Tech-enabled scheduling powered by ProFlow360.",
+  authors: [{ name: "Verlua.com", url: "https://verlua.com" }],
   icons: { icon: "/favicon.ico" },
   openGraph: {
     siteName: "ProFlow Home Services",
