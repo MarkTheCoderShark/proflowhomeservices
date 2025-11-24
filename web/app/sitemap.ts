@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.proflowhomeservices.com";
 
   const staticRoutes = [
     { path: "", priority: 1.0, changeFrequency: "weekly" as const },

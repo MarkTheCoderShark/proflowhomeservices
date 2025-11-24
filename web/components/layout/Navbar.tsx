@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { track } from "@/lib/analytics";
 
 const serviceCategories = [
@@ -52,8 +52,25 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const isServiceActive = pathname?.startsWith("/services") || pathname === "/remodeling";
+
+  const handleServicesMouseEnter = () => {
+    // Clear any pending close timeout
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setServicesOpen(true);
+  };
+
+  const handleServicesMouseLeave = () => {
+    // Add a delay before closing to allow users to move to the dropdown
+    closeTimeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+    }, 200);
+  };
 
   return (
     <header className="sticky top-0 z-40">
@@ -96,8 +113,8 @@ export default function Navbar() {
           {/* Services Dropdown */}
           <div
             className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
+            onMouseEnter={handleServicesMouseEnter}
+            onMouseLeave={handleServicesMouseLeave}
           >
             <button
               className={`text-white hover:text-mint_cream-500 transition-colors flex items-center gap-1 ${
