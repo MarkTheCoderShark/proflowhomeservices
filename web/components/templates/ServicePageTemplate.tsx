@@ -6,14 +6,17 @@ import BeforeAfter from "@/components/ui/BeforeAfter";
 import RelatedServicesSpotlight from "@/components/sections/RelatedServicesSpotlight";
 import ServiceAreasGrid from "@/components/sections/ServiceAreasGrid";
 import ServiceProcess from "@/components/sections/ServiceProcess";
-import type { ServicePageContent } from "@/data/services";
+import ServiceBlogSection from "@/components/sections/ServiceBlogSection";
+import type { ServicePageContent, ServiceSlug } from "@/data/services";
 
 export default function ServicePageTemplate({
   data,
   notes,
+  serviceSlug,
 }: {
   data: ServicePageContent;
   notes?: ReactNode;
+  serviceSlug?: ServiceSlug;
 }) {
   return (
     <div>
@@ -112,6 +115,11 @@ export default function ServicePageTemplate({
           </div>
         </section>
       ))}
+
+      {/* Blog Articles Section */}
+      {serviceSlug && (
+        <ServiceBlogSection serviceSlug={serviceSlug} serviceName={data.heroTitle} />
+      )}
 
       {/* Related Services Spotlight (if provided) */}
       {data.relatedServices && data.relatedServices.length > 0 && (

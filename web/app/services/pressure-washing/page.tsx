@@ -28,6 +28,7 @@ export default function Page() {
       />
       <ServicePageTemplate
         data={data}
+        serviceSlug="pressure-washing"
         notes={
           <>
             Serving <CityLinkList /> and surrounding areas.

@@ -28,6 +28,7 @@ export default function Page() {
       />
       <ServicePageTemplate
         data={data}
+        serviceSlug="gutter-repair-replacement"
         notes={
           <>
             Serving <CityLinkList /> and nearby areas.

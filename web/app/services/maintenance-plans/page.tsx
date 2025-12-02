@@ -28,6 +28,7 @@ export default function Page() {
       />
       <ServicePageTemplate
         data={data}
+        serviceSlug="maintenance-plans"
         notes={
           <>
             Serving <CityLinkList /> and nearby communities with recurring care.

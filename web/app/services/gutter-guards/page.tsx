@@ -28,6 +28,7 @@ export default function Page() {
       />
       <ServicePageTemplate
         data={data}
+        serviceSlug="gutter-guards"
         notes={
           <>
             Serving <CityLinkList /> and surrounding cities.

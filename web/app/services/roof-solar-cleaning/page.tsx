@@ -28,6 +28,7 @@ export default function Page() {
       />
       <ServicePageTemplate
         data={data}
+        serviceSlug="roof-solar-cleaning"
         notes={
           <>
             Serving <CityLinkList /> and the greater Sacramento region.

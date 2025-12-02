@@ -151,3 +151,201 @@ export function FAQPageJsonLd({
   };
   return <JsonLd id="ld-faq" data={data} />;
 }
+
+export function ArticleJsonLd({
+  headline,
+  description,
+  image,
+  datePublished,
+  dateModified,
+  author = "ProFlow Home Services Team",
+  authorType = "Organization",
+  url,
+}: {
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: string;
+  authorType?: "Person" | "Organization";
+  url: string;
+}) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com";
+
+  const authorSchema = authorType === "Organization"
+    ? {
+        "@type": "Organization",
+        name: author,
+        url: baseUrl,
+        logo: {
+          "@type": "ImageObject",
+          url: `${baseUrl}/logo.png`,
+        },
+        sameAs: [
+          "https://www.facebook.com/proflowhomeservices",
+          "https://www.instagram.com/proflowhomeservices",
+        ],
+      }
+    : {
+        "@type": "Person",
+        name: author,
+        url: `${baseUrl}/about`,
+        worksFor: {
+          "@type": "Organization",
+          name: "ProFlow Home Services",
+          url: baseUrl,
+        },
+      };
+
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    image: image.startsWith("http") ? image : `${baseUrl}${image}`,
+    datePublished,
+    dateModified: dateModified ?? datePublished,
+    author: authorSchema,
+    publisher: {
+      "@type": "Organization",
+      name: "ProFlow Home Services",
+      url: baseUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/logo.png`,
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "(916) 740-7249",
+        contactType: "customer service",
+        areaServed: "US",
+        availableLanguage: ["English"],
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url.startsWith("http") ? url : `${baseUrl}${url}`,
+    },
+    isAccessibleForFree: true,
+    inLanguage: "en-US",
+  };
+  return <JsonLd id="ld-article" data={data} />;
+}
+
+export function OrganizationJsonLd() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com";
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": `${baseUrl}/#organization`,
+    name: "ProFlow Home Services",
+    url: baseUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: `${baseUrl}/logo.png`,
+      width: 512,
+      height: 512,
+    },
+    image: `${baseUrl}/logo.png`,
+    description: "Professional home services including gutter cleaning, pressure washing, painting, and handyman services in Sacramento, Roseville, and Rocklin, CA.",
+    telephone: "(916) 740-7249",
+    email: "info@proflowhomeservices.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Sacramento",
+      addressRegion: "CA",
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 38.5816,
+      longitude: -121.4944,
+    },
+    areaServed: [
+      { "@type": "City", name: "Sacramento" },
+      { "@type": "City", name: "Roseville" },
+      { "@type": "City", name: "Rocklin" },
+      { "@type": "City", name: "Folsom" },
+      { "@type": "City", name: "Lincoln" },
+      { "@type": "City", name: "Granite Bay" },
+      { "@type": "City", name: "Loomis" },
+      { "@type": "City", name: "Auburn" },
+      { "@type": "City", name: "Citrus Heights" },
+    ],
+    priceRange: "$$",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "08:00",
+        closes: "16:00",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/proflowhomeservices",
+      "https://www.instagram.com/proflowhomeservices",
+      "https://www.yelp.com/biz/proflow-home-services-sacramento",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Home Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gutter Cleaning" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gutter Guard Installation" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pressure Washing" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Handyman Services" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roof & Solar Cleaning" } },
+      ],
+    },
+  };
+  return <JsonLd id="ld-organization" data={data} />;
+}
+
+export function HowToJsonLd({
+  name,
+  description,
+  steps,
+  totalTime,
+  estimatedCost,
+}: {
+  name: string;
+  description: string;
+  steps: { name: string; text: string; image?: string }[];
+  totalTime?: string;
+  estimatedCost?: { currency: string; value: string };
+}) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com";
+  const data: any = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      ...(step.image && { image: step.image.startsWith("http") ? step.image : `${baseUrl}${step.image}` }),
+    })),
+  };
+  if (totalTime) {
+    data.totalTime = totalTime;
+  }
+  if (estimatedCost) {
+    data.estimatedCost = {
+      "@type": "MonetaryAmount",
+      currency: estimatedCost.currency,
+      value: estimatedCost.value,
+    };
+  }
+  return <JsonLd id="ld-howto" data={data} />;
+}

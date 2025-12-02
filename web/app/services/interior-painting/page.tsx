@@ -28,6 +28,7 @@ export default function Page() {
       />
       <ServicePageTemplate
         data={data}
+        serviceSlug="interior-painting"
         notes={
           <>
             Serving <CityLinkList /> and nearby towns.

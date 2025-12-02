@@ -4,7 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { WebSiteJsonLd } from "@/components/seo/JsonLd";
+import { WebSiteJsonLd, OrganizationJsonLd } from "@/components/seo/JsonLd";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -70,6 +70,7 @@ export default function RootLayout({
       ) : null}
       <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
         <WebSiteJsonLd />
+        <OrganizationJsonLd />
         {process.env.NEXT_PUBLIC_GA_ID ? (
           <>
             <Script
@@ -79,36 +80,13 @@ export default function RootLayout({
             <Script id="ga-init" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);} 
+                function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
               `}
             </Script>
           </>
         ) : null}
-        <Script id="ld-localbusiness" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "ProFlow Home Services",
-            url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://proflowhomeservices.com",
-            areaServed: [
-              "Sacramento",
-              "Roseville",
-              "Rocklin",
-              "Loomis",
-              "Auburn",
-              "Folsom",
-              "Granite Bay",
-              "Lincoln",
-            ],
-            telephone: "(916) 740-7249",
-            brand: {
-              "@type": "Brand",
-              name: "ProFlow Home Services",
-            },
-          })}
-        </Script>
         <Navbar />
         <main>{children}</main>
         <Footer />

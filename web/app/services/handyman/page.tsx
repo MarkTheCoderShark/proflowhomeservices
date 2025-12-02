@@ -28,6 +28,7 @@ export default function Page() {
       />
       <ServicePageTemplate
         data={data}
+        serviceSlug="handyman"
         notes={
           <>
             Serving <CityLinkList /> and nearby neighborhoods.
