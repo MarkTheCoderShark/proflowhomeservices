@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogArticles } from "@/data/blog";
+import { allServiceCityCombinations } from "@/data/service-cities";
 
 type SitemapRoute = {
   path: string;
@@ -63,7 +64,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: article.dateModified ?? article.datePublished,
   }));
 
-  const allRoutes = [...staticRoutes, ...servicePages, ...remodelingPages, ...cityPages, ...blogPages];
+  // Service + City landing pages (54 pages)
+  const serviceCityPages: SitemapRoute[] = allServiceCityCombinations.map(({ service, city }) => ({
+    path: `services/${service}/${city}`,
+    priority: 0.85,
+    changeFrequency: "monthly",
+  }));
+
+  const allRoutes = [...staticRoutes, ...servicePages, ...remodelingPages, ...cityPages, ...blogPages, ...serviceCityPages];
 
   return allRoutes.map((route) => ({
     url: `${baseUrl}/${route.path}`,

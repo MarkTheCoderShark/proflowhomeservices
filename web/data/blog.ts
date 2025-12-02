@@ -149,6 +149,213 @@ export const blogArticles: BlogArticle[] = [
     readTime: "9 min read",
     relatedService: "roof-solar-cleaning",
   },
+
+  // Roseville Local SEO Articles
+  {
+    slug: "gutter-cleaning-roseville",
+    title: "Gutter Cleaning in Roseville: Complete Homeowner's Guide",
+    description:
+      "Expert gutter cleaning guide for Roseville, CA homeowners. Learn optimal cleaning schedules for Placer County's climate, neighborhood-specific challenges from Blue Oaks to Sun City, and how to protect your home from water damage.",
+    excerpt:
+      "Roseville's oak trees and Placer County weather create unique gutter challenges. Learn when to clean, what to watch for, and how to protect your investment.",
+    image: "/hero-service-gutter-cleaning.jpeg",
+    category: "Gutters",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "12 min read",
+    relatedService: "gutter-cleaning",
+  },
+  {
+    slug: "pressure-washing-roseville",
+    title: "Pressure Washing Services in Roseville, CA: Complete Guide",
+    description:
+      "Professional pressure washing guide for Roseville homes. Learn safe techniques for stucco, driveways, and decks, best timing for Placer County's climate, and why soft washing matters for your property.",
+    excerpt:
+      "Transform your Roseville home's curb appeal with professional pressure washing. Learn what works for stucco, concrete, and every surface.",
+    image: "/hero-service-pressure-washing.jpeg",
+    category: "Exterior Cleaning",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "11 min read",
+    relatedService: "pressure-washing",
+  },
+  {
+    slug: "home-maintenance-roseville",
+    title: "Roseville Home Maintenance: Seasonal Checklist for Placer County",
+    description:
+      "Comprehensive seasonal maintenance checklist for Roseville homeowners. Spring, summer, fall, and winter tasks tailored to Placer County's climate, from gutter cleaning to HVAC service.",
+    excerpt:
+      "Roseville's extreme temperatures demand proactive home maintenance. Follow this seasonal guide to protect your investment and prevent expensive repairs.",
+    image: "/hero-service-gutter-cleaning.jpeg",
+    category: "Home Maintenance",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "15 min read",
+    relatedService: "maintenance-plans",
+  },
+
+  // Lincoln Local SEO Articles
+  {
+    slug: "gutter-guards-lincoln",
+    title: "Gutter Guards in Lincoln, CA: Are They Worth It?",
+    description:
+      "Discover if gutter guards are worth the investment for Lincoln, CA homes. Expert analysis for 12 Bridges, Sun City Lincoln Hills, and Catta Verdera neighborhoods.",
+    excerpt:
+      "Lincoln homeowners face unique gutter challenges from oak debris. Learn whether gutter guards make sense for your 12 Bridges, Sun City, or Catta Verdera property.",
+    image: "/hero-service-gutter-cleaning.jpeg",
+    category: "Gutters",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "10 min read",
+    relatedService: "gutter-guards",
+  },
+  {
+    slug: "interior-painting-lincoln",
+    title: "Interior Painting in Lincoln: Transform Your Home",
+    description:
+      "Complete guide to interior painting for Lincoln, CA homes. Expert tips for 12 Bridges, Sun City Lincoln Hills, and Catta Verdera properties. Color trends and professional techniques.",
+    excerpt:
+      "Transform your Lincoln home with professional interior painting. From color selection to finish quality, here's everything 12 Bridges and Sun City homeowners need to know.",
+    image: "/hero-service-interior-painting.jpeg",
+    category: "Painting",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "11 min read",
+    relatedService: "interior-painting",
+  },
+
+  // Granite Bay Local SEO Articles
+  {
+    slug: "home-services-granite-bay",
+    title: "Premium Home Services in Granite Bay, CA",
+    description:
+      "Comprehensive guide to home services for Granite Bay luxury properties. Expert care for Treelake, Wexford, Douglas Ranch, and custom estates near Folsom Lake.",
+    excerpt:
+      "Granite Bay luxury homes demand premium service. Complete guide to maintaining Treelake, Wexford, and Douglas Ranch properties with professional care.",
+    image: "/hero-service-handyman.jpeg",
+    category: "Home Maintenance",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "12 min read",
+  },
+  {
+    slug: "gutter-cleaning-granite-bay",
+    title: "Gutter Cleaning in Granite Bay: Protect Your Investment",
+    description:
+      "Essential guide to gutter cleaning for Granite Bay luxury homes. Protect your Treelake, Wexford, or Douglas Ranch property from water damage with expert maintenance.",
+    excerpt:
+      "Protect your Granite Bay investment with professional gutter cleaning. Learn why Treelake, Wexford, and Douglas Ranch properties need specialized care.",
+    image: "/hero-service-gutter-cleaning.jpeg",
+    category: "Gutters",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "10 min read",
+    relatedService: "gutter-cleaning",
+  },
+
+  // Citrus Heights Local SEO Articles
+  {
+    slug: "gutter-cleaning-citrus-heights",
+    title: "Gutter Cleaning in Citrus Heights: Essential Home Care",
+    description:
+      "Expert gutter cleaning guide for Citrus Heights homeowners. Learn how mature oak trees, seasonal debris, and local climate create unique maintenance needs for Sunrise Ranch, Arcade Creek, and Stock Ranch properties.",
+    excerpt:
+      "Citrus Heights' mature oak trees demand specialized gutter care. Discover the cleaning schedule and techniques that protect your ranch-style home.",
+    image: "/hero-service-gutter-cleaning.jpeg",
+    category: "Gutters",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "11 min read",
+    relatedService: "gutter-cleaning",
+  },
+  {
+    slug: "interior-painting-citrus-heights",
+    title: "Interior Painting in Citrus Heights, CA",
+    description:
+      "Complete interior painting guide for Citrus Heights homes. Color selection for ranch-style properties, dealing with 1970s-1990s features, and transforming your Rusch Park or Birdcage Village home.",
+    excerpt:
+      "Transform your Citrus Heights ranch home with the right paint colors and professional techniques. From prep to final coat.",
+    image: "/hero-service-interior-painting.jpeg",
+    category: "Painting",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "10 min read",
+    relatedService: "interior-painting",
+  },
+
+  // Rocklin Local SEO Articles
+  {
+    slug: "gutter-cleaning-rocklin",
+    title: "Gutter Cleaning in Rocklin: Professional Guide for Homeowners",
+    description:
+      "Expert gutter cleaning guide for Rocklin, CA homeowners. Learn maintenance schedules for Stanford Ranch, Whitney Oaks, Sunset West, and surrounding Placer County neighborhoods.",
+    excerpt:
+      "Rocklin's foothill location and granite soil create unique drainage challenges. Learn how to protect your property with professional gutter maintenance.",
+    image: "/hero-service-gutter-cleaning.jpeg",
+    category: "Gutters",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "11 min read",
+    relatedService: "gutter-cleaning",
+  },
+  {
+    slug: "exterior-painting-rocklin",
+    title: "Exterior Painting in Rocklin, CA: Protect Your Home Investment",
+    description:
+      "Complete exterior painting guide for Rocklin homes. HOA-compliant colors, climate-appropriate products, and professional techniques for Stanford Ranch, Whitney Oaks, and Sunset West properties.",
+    excerpt:
+      "Rocklin's temperature swings and foothill sun demand quality exterior paint. Learn colors, timing, and techniques that protect your investment.",
+    image: "/hero-service-exterior-painting.jpeg",
+    category: "Painting",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "12 min read",
+    relatedService: "exterior-painting",
+  },
+  {
+    slug: "handyman-services-rocklin",
+    title: "Rocklin Handyman Services: Your Complete Home Repair Guide",
+    description:
+      "Comprehensive handyman services guide for Rocklin homeowners. From Stanford Ranch to Whitney Oaks, learn what repairs to prioritize and when to call professionals.",
+    excerpt:
+      "Rocklin homes need reliable handyman support. Discover what repairs to tackle, costs to expect, and how to get your to-do list done right.",
+    image: "/hero-service-handyman.jpeg",
+    category: "Home Repairs",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "10 min read",
+    relatedService: "handyman",
+  },
+
+  // Loomis Local SEO Articles
+  {
+    slug: "pressure-washing-loomis",
+    title: "Pressure Washing in Loomis: Rural Property Care",
+    description:
+      "Comprehensive pressure washing guide for Loomis rural properties. Learn how to clean homes, barns, driveways, and outbuildings while managing red dust and acreage maintenance challenges.",
+    excerpt:
+      "Loomis acreage properties need specialized pressure washing approaches. From farmhouses to barns, discover rural property cleaning techniques.",
+    image: "/hero-service-pressure-washing.jpeg",
+    category: "Exterior Cleaning",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "11 min read",
+    relatedService: "pressure-washing",
+  },
+  {
+    slug: "exterior-painting-loomis",
+    title: "Exterior Painting in Loomis, CA: Farmhouse to Modern",
+    description:
+      "Expert exterior painting for Loomis properties from classic farmhouses to modern designs. Color selection, timing, and techniques for foothill climate and rural acreage homes.",
+    excerpt:
+      "Loomis homes deserve painting that honors their character. Learn color strategies and techniques for farmhouse, ranch, and modern rural properties.",
+    image: "/hero-service-exterior-painting.jpeg",
+    category: "Painting",
+    datePublished: "2024-12-01",
+    dateModified: "2024-12-01",
+    readTime: "12 min read",
+    relatedService: "exterior-painting",
+  },
 ];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
@@ -186,9 +393,9 @@ export function getArticlesByService(serviceSlug: string): BlogArticle[] {
 }
 
 export const blogCategories = [
-  { name: "Gutters", slug: "gutters", count: 3 },
-  { name: "Painting", slug: "painting", count: 2 },
-  { name: "Exterior Cleaning", slug: "exterior-cleaning", count: 2 },
-  { name: "Home Maintenance", slug: "home-maintenance", count: 1 },
-  { name: "Home Repairs", slug: "home-repairs", count: 1 },
+  { name: "Gutters", slug: "gutters", count: 8 },
+  { name: "Painting", slug: "painting", count: 6 },
+  { name: "Exterior Cleaning", slug: "exterior-cleaning", count: 4 },
+  { name: "Home Maintenance", slug: "home-maintenance", count: 3 },
+  { name: "Home Repairs", slug: "home-repairs", count: 2 },
 ];
